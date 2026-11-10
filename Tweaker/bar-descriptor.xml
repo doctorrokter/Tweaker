@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+
+   Copyright (c) 2011-2015 BlackBerry Limited.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+<!-- BlackBerry 10 application descriptor file.
+
+    Specifies parameters for identifying, installing, and launching native applications on BlackBerry 10.
+
+-->
+
+    <!-- A universally unique application identifier. Must be unique across all BlackBerry 10 applications.
+         Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+    <id>doctorrokter.Tweaker</id>
+    <configuration name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7-g/Tweaker" entry="true" type="Qnx/Elf">Tweaker</asset>
+    </configuration>
+    <configuration name="Device-Release">
+       <entryPointType>Qnx/Cascades</entryPointType>
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7/Tweaker.so" entry="true" type="Qnx/Elf">Tweaker.so</asset>
+    </configuration>
+    <configuration name="Device-Profile">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm-p/o.le-v7-g/Tweaker" entry="true" type="Qnx/Elf">Tweaker</asset>
+    </configuration>
+    <configuration name="Simulator-Debug">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="x86/o-g/Tweaker" entry="true" type="Qnx/Elf">Tweaker</asset>
+    </configuration>
+
+    <!-- The name that is displayed in the BlackBerry 10 application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <name>
+       Tweaker
+       <text xml:lang="ru">Tweaker</text>
+       <text xml:lang="pl">Tweaker</text>
+    </name>
+
+    <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade.
+         Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+         An updated version of application must have a versionNumber value higher than the previous version. Required. -->
+    <versionNumber>1.0.1</versionNumber>
+    <!-- 10.3.0 is the minimum: the QML imports bb.cascades 1.4, which arrived in BB10 OS 10.3.0. -->
+    <platformVersion>10.3.0</platformVersion>
+
+    <!-- Fourth digit segment of the package version. First three segments are taken from the
+         <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
+    <buildId>38</buildId>
+    <packageLocale>ru,pl</packageLocale>
+
+    <!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+    <!-- <versionLabel></versionLabel> -->
+
+    <!-- Description, displayed in the BlackBerry 10 application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+    <description>
+       Modern emoji in every app on BlackBerry 10: Telegram or Noto style, or a font file of your own. Up-to-date root certificates. Light or dark system theme. Requires a phone with root v4.
+       <text xml:lang="ru">Современные эмодзи во всех приложениях BlackBerry 10: стиль Telegram или Noto либо свой файл шрифта. Актуальные корневые сертификаты. Светлая или тёмная тема системы. Нужен телефон с root v4.</text>
+       <text xml:lang="pl">Nowoczesne emoji we wszystkich aplikacjach BlackBerry 10: styl Telegram lub Noto albo własny plik czcionki. Aktualne certyfikaty główne. Jasny lub ciemny motyw systemu. Wymagany telefon z root v4.</text>
+    </description>
+
+    <!-- Copyright information. Optional. -->
+    <!-- <copyright></copyright> -->
+
+    <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
+    <author>Mikhail Chachkouski</author>
+
+    <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
+    <!-- <authorId>ABC1234YjsnUk235h</authorId> -->
+
+    <initialWindow>
+        <autoOrients>true</autoOrients>
+        <systemChrome>none</systemChrome>
+    </initialWindow>
+
+    <!-- The application icon at several sizes for BB10 densities, and the splash screens per resolution and orientation:
+         bb-shared/tools/gen-art.js (the command is in README.md, "Art"). -->
+    <icon>
+        <image>icon_144_x_144.png</image>
+        <image>icon_110_x_110.png</image>
+        <image>icon_96_x_96.png</image>
+        <image>icon_90_x_90.png</image>
+        <image>icon.png</image>
+    </icon>
+
+    <splashScreens>
+        <image>splash_1280_x_720.png</image>
+        <image>splash_1280_x_768.png</image>
+        <image>splash_1440_x_1440.png</image>
+        <image>splash_720_x_1280.png</image>
+        <image>splash_720_x_720.png</image>
+        <image>splash_768_x_1280.png</image>
+    </splashScreens>
+
+    <asset path="icon.png">icon.png</asset>
+    <asset path="icon_144_x_144.png">icon_144_x_144.png</asset>
+    <asset path="icon_110_x_110.png">icon_110_x_110.png</asset>
+    <asset path="icon_96_x_96.png">icon_96_x_96.png</asset>
+    <asset path="icon_90_x_90.png">icon_90_x_90.png</asset>
+    <asset path="splash_1280_x_720.png">splash_1280_x_720.png</asset>
+    <asset path="splash_1280_x_768.png">splash_1280_x_768.png</asset>
+    <asset path="splash_1440_x_1440.png">splash_1440_x_1440.png</asset>
+    <asset path="splash_720_x_1280.png">splash_720_x_1280.png</asset>
+    <asset path="splash_720_x_720.png">splash_720_x_720.png</asset>
+    <asset path="splash_768_x_1280.png">splash_768_x_1280.png</asset>
+    <asset path="assets">assets</asset>
+
+    <!-- Locale support -->
+    <asset path="translations" dest="qm">
+        <include name="*.qm"/>
+    </asset>
+
+    <!-- bb-shared QML (the settings rows and the coffee card) and the card's
+         images, packed from the sibling module: `import "../shared"` in a subfolder (bb-shared README, sections 4-6a). -->
+    <asset path="../bb-shared/ui/qml" dest="assets/shared">
+        <include name="*.qml"/>
+    </asset>
+    <asset path="../bb-shared/ui/images" dest="assets/shared/images">
+        <include name="*.png"/>
+    </asset>
+
+    <!-- The root side: boot/tweaker-boot.sh, run from the package and copied as the boot start. -->
+    <asset path="boot/tweaker-boot.sh">tweaker-boot.sh</asset>
+    <!-- The two built-in emoji styles, not included, see the README next to this folder:
+         they go in fonts/. core/EmojiFont picks one by the user's choice. -->
+    <asset path="fonts/NotoColorEmoji-telegram.ttf">emoji-telegram.ttf</asset>
+    <asset path="fonts/NotoColorEmoji-109.ttf">emoji-noto.ttf</asset>
+    <!-- Mozilla's roots as the phone's certificate manager keeps them, and the list core/Certificates checks against:
+         tools/make-certs.sh. What writes them: tools/build-certstore-tool.sh. -->
+    <asset path="certs" dest="certs">
+        <include name="mozilla.db"/>
+        <include name="index.txt"/>
+    </asset>
+    <asset path="boot/certstore-tool" type="Qnx/Elf">certstore-tool</asset>
+    <!-- The Hub's icons lightened for the dark theme (docs/TWEAKS.md, "System theme"). -->
+    <asset path="theme/hub_icons">hub_icons</asset>
+
+    <!-- "Choose a font file", and the boot log in the shared misc folder. -->
+    <permission>access_shared</permission>
+    <!-- Request permission to execute native code.  Required for native applications. -->
+    <permission system="true">run_native</permission>
+    <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
+    <env var="CASCADES_THEME" value="dark"/>
+
+</qnx>

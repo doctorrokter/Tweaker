@@ -1,0 +1,28 @@
+# --- BlackBerry 10 / Qt / Momentics build output ---
+arm/
+arm-p/
+x86/
+o-g/
+o.le-v7-g/
+*.o
+*.obj
+moc_*.cpp
+*.moc
+*_gch/
+*.gch
+.settings/
+
+# qmake / Momentics generated makefiles. KEEP the template Makefiles: the project's root shim includes mk/cs-base.mk
+# and the one in translations/ drives lupdate/lrelease - a clone without them does not build (KB 2.6).
+Makefile
+Makefile.*
+!/Makefile
+!/translations/Makefile
+*.pro.user
+
+# Compiled translations (the .ts files are the source of truth)
+*.qm
+
+# Built packages and the build's own marker
+*.bar
+.build-env

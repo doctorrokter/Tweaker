@@ -1,0 +1,19 @@
+[
+    {
+        "version": "1.0.1",
+        "date": "2026-11-10",
+        "changes": [
+            "Certyfikaty aktualizują się teraz na każdym telefonie, także jeśli nigdy nie importowano na nim certyfikatu.",
+            "Wygasłe certyfikaty główne są wykrywane na samym telefonie."
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "date": "2026-11-10",
+        "changes": [
+            "Nowe emoji we wszystkich aplikacjach: styl Telegram lub Noto albo własny plik czcionki.",
+            "Aktualne certyfikaty główne.",
+            "Jasny lub ciemny motyw, osobno dla Huba i dla reszty systemu."
+        ]
+    }
+]

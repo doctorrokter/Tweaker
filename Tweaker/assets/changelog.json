@@ -1,0 +1,19 @@
+[
+    {
+        "version": "1.0.1",
+        "date": "2026-11-10",
+        "changes": [
+            "Certificates now update on every phone, also on one that has never had a certificate imported.",
+            "Expired root certificates are found on the phone itself."
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "date": "2026-11-10",
+        "changes": [
+            "New emoji in every app: Telegram or Noto style, or a font file of your own.",
+            "Up-to-date root certificates.",
+            "Light or dark theme, for the Hub and for the rest of the system."
+        ]
+    }
+]
