@@ -56,13 +56,13 @@
     <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade.
          Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
          An updated version of application must have a versionNumber value higher than the previous version. Required. -->
-    <versionNumber>1.0.1</versionNumber>
+    <versionNumber>1.1.0</versionNumber>
     <!-- 10.3.0 is the minimum: the QML imports bb.cascades 1.4, which arrived in BB10 OS 10.3.0. -->
     <platformVersion>10.3.0</platformVersion>
 
     <!-- Fourth digit segment of the package version. First three segments are taken from the
          <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
-    <buildId>38</buildId>
+    <buildId>45</buildId>
     <packageLocale>ru,pl</packageLocale>
 
     <!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
@@ -136,12 +136,22 @@
         <include name="*.png"/>
     </asset>
 
-    <!-- The root side: boot/tweaker-boot.sh, run from the package and copied as the boot start. -->
+    <!-- The system side: boot/tweaker-boot.sh, run from the package and copied as the boot start. -->
     <asset path="boot/tweaker-boot.sh">tweaker-boot.sh</asset>
     <!-- The two built-in emoji styles, not included, see the README next to this folder:
          they go in fonts/. core/EmojiFont picks one by the user's choice. -->
     <asset path="fonts/NotoColorEmoji-telegram.ttf">emoji-telegram.ttf</asset>
     <asset path="fonts/NotoColorEmoji-109.ttf">emoji-noto.ttf</asset>
+    <!-- Fonts for letters of rare alphabets (Noto, SIL OFL: scriptfonts/OFL.txt), not included, see the README next
+         to this folder: tools/script-fonts.js puts them in fonts/noto-scripts/. With them, the components that name them
+         in the system's composite lists (docs/TWEAKS.md, "Rare alphabets"). core/ScriptFonts hands the folder to the script. -->
+    <asset path="fonts/noto-scripts" dest="scriptfonts">
+        <include name="*.ttf"/>
+    </asset>
+    <asset path="scriptfonts" dest="scriptfonts">
+        <include name="components.cfr-part"/>
+        <include name="OFL.txt"/>
+    </asset>
     <!-- Mozilla's roots as the phone's certificate manager keeps them, and the list core/Certificates checks against:
          tools/make-certs.sh. What writes them: tools/build-certstore-tool.sh. -->
     <asset path="certs" dest="certs">

@@ -1,5 +1,13 @@
 [
     {
+        "version": "1.1.0",
+        "date": "2026-11-19",
+        "changes": [
+            "Letters of rare alphabets, hieroglyphs, ancient scripts and fancy math letters now show in every app instead of empty boxes.",
+            "Newer emoji no longer show as empty boxes in apps."
+        ]
+    },
+    {
         "version": "1.0.1",
         "date": "2026-11-10",
         "changes": [

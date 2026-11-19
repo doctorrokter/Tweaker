@@ -42,6 +42,9 @@ NavigationPane {
         onEmojiFontRequested: {
             root.push(emojiFontDef.createObject());
         }
+        onScriptFontsRequested: {
+            root.push(scriptFontsDef.createObject());
+        }
         onCertificatesRequested: {
             root.push(certificatesDef.createObject());
         }
@@ -54,6 +57,19 @@ NavigationPane {
         ComponentDefinition {
             id: emojiFontDef
             EmojiFontPage {
+            }
+        },
+        ComponentDefinition {
+            id: scriptFontsDef
+            ScriptFontsPage {
+                onSamplesRequested: {
+                    root.push(scriptSamplesDef.createObject());
+                }
+            }
+        },
+        ComponentDefinition {
+            id: scriptSamplesDef
+            ScriptSamplesPage {
             }
         },
         ComponentDefinition {

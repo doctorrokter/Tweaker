@@ -6,6 +6,7 @@ Page {
     id: root
 
     signal emojiFontRequested()
+    signal scriptFontsRequested()
     signal certificatesRequested()
     signal themeRequested()
 
@@ -56,6 +57,15 @@ Page {
                 imageSource: "asset:///images/ic_emoji.png"
                 onTapped: {
                     root.emojiFontRequested();
+                }
+            }
+
+            SettingsItem {
+                title: qsTr("Rare alphabets") + Retranslate.onLocaleOrLanguageChanged
+                description: root.stateName(scriptFonts.enabled) + Retranslate.onLocaleOrLanguageChanged
+                imageSource: "asset:///images/ic_check_spell.png"
+                onTapped: {
+                    root.scriptFontsRequested();
                 }
             }
 

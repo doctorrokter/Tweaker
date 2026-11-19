@@ -1,6 +1,6 @@
 # Tweaker
 
-System tweaks for BlackBerry 10 phones with root v4. The first one: modern emoji in every app, in the Telegram or Noto style or from a
+System tweaks for BlackBerry 10 phones with the system kit v4. The first one: modern emoji in every app, in the Telegram or Noto style or from a
 font file of your own. How it works and where everything is on the phone: [docs/TWEAKS.md](docs/TWEAKS.md). The store's texts:
 [STORE.md](STORE.md).
 

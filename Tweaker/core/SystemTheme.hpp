@@ -1,6 +1,6 @@
 /*
  * SystemTheme - the light or dark theme of the phone (the context property "systemTheme"), in two parts that are set apart: the Hub
- * with email, and everything else that takes the system's theme. The work is boot/tweaker-boot.sh's, as root; the system forgets both
+ * with email, and everything else that takes the system's theme. The work is boot/tweaker-boot.sh's, as the system user; the system forgets both
  * at every reboot, so the boot start sets them again.
  *
  * `systemDark` is what is really set, the system's defaultTheme. `hubDark` is the choice the script keeps for the boot start.

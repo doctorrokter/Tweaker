@@ -1,0 +1,590 @@
+[
+ {
+  "name": "Adlam Unjoined",
+  "sample": "𞤀𞤁𞤂𞤃𞤄𞤅𞤆𞤇𞤈𞤉"
+ },
+ {
+  "name": "Anatolian Hieroglyphs",
+  "sample": "𔐀𔐁𔐂𔐃𔐄𔐅𔐆𔐇𔐈𔐉"
+ },
+ {
+  "name": "Armenian",
+  "sample": "֍֎֏"
+ },
+ {
+  "name": "Avestan",
+  "sample": "𐬀𐬁𐬂𐬃𐬄𐬅𐬆𐬇𐬈𐬉"
+ },
+ {
+  "name": "Balinese",
+  "sample": "ᬪᬵᬲᬩᬮᬶ"
+ },
+ {
+  "name": "Bamum",
+  "sample": "ꚠꚡꚢꚣꚤꚥꚦꚧꚨꚩ"
+ },
+ {
+  "name": "Bassa Vah",
+  "sample": "𖫐𖫑𖫒𖫓𖫔𖫕𖫖𖫗𖫘𖫙"
+ },
+ {
+  "name": "Batak",
+  "sample": "ᯀᯁᯂᯃᯄᯅᯆᯇᯈᯉ"
+ },
+ {
+  "name": "Bhaiksuki",
+  "sample": "𑰀𑰁𑰂𑰃𑰄𑰅𑰆𑰇𑰈𑰊"
+ },
+ {
+  "name": "Brahmi",
+  "sample": "𑀃𑀄𑀅𑀆𑀇𑀈𑀉𑀊𑀋𑀌"
+ },
+ {
+  "name": "Buginese",
+  "sample": "ᨀᨁᨂᨃᨄᨅᨆᨇᨈᨉ"
+ },
+ {
+  "name": "Buhid",
+  "sample": "ᝀᝁᝂᝃᝄᝅᝆᝇᝈᝉ"
+ },
+ {
+  "name": "Canadian Aboriginal",
+  "sample": "ᙷᙸᙹᙺᙻᙼᙽᙾᙿᢰ"
+ },
+ {
+  "name": "Carian",
+  "sample": "𐊠𐊡𐊢𐊣𐊤𐊥𐊦𐊧𐊨𐊩"
+ },
+ {
+  "name": "Caucasian Albanian",
+  "sample": "𐔰𐔱𐔲𐔳𐔴𐔵𐔶𐔷𐔸𐔹"
+ },
+ {
+  "name": "Chakma",
+  "sample": "၀၁၂၃၄၅၆၇၈၉"
+ },
+ {
+  "name": "Cham",
+  "sample": "ꨀꨁꨂꨃꨄꨅꨆꨇꨈꨉ"
+ },
+ {
+  "name": "Cherokee",
+  "sample": "ᎠᎡᎢᎣᎤᎥᎦᎧᎨᎩ"
+ },
+ {
+  "name": "Chorasmian",
+  "sample": "𐾰𐾱𐾲𐾳𐾴𐾵𐾶𐾷𐾸𐾹"
+ },
+ {
+  "name": "Coptic",
+  "sample": "ⲀⲁⲂⲃⲄⲅⲆⲇⲈⲉ"
+ },
+ {
+  "name": "Cuneiform",
+  "sample": "𒀀𒀁𒀂𒀃𒀄𒀅𒀆𒀇𒀈𒀉"
+ },
+ {
+  "name": "Cypriot",
+  "sample": "𐠀𐠁𐠂𐠃𐠄𐠅𐠈𐠊𐠋𐠌"
+ },
+ {
+  "name": "Cypro Minoan",
+  "sample": "𒾐𒾑𒾒𒾓𒾔𒾕𒾖𒾗𒾘𒾙"
+ },
+ {
+  "name": "Deseret",
+  "sample": "𐐀𐐁𐐂𐐃𐐄𐐅𐐆𐐇𐐈𐐉"
+ },
+ {
+  "name": "EgyptHiero",
+  "sample": "𓆉 𓆏 𓃰 𓀀 𓂀"
+ },
+ {
+  "name": "Elbasan",
+  "sample": "𐔀𐔁𐔂𐔃𐔄𐔅𐔆𐔇𐔈𐔉"
+ },
+ {
+  "name": "Elymaic",
+  "sample": "𐿠𐿡𐿢𐿣𐿤𐿥𐿦𐿧𐿨𐿩"
+ },
+ {
+  "name": "Ethiopic",
+  "sample": "ሀሁሂሃሄህሆሇለሉ"
+ },
+ {
+  "name": "Georgian",
+  "sample": "ჽჾჿᲐᲑᲒᲓᲔᲕᲖ"
+ },
+ {
+  "name": "Glagolitic",
+  "sample": "ⰀⰁⰂⰃⰄⰅⰆⰇⰈⰉ"
+ },
+ {
+  "name": "Gothic",
+  "sample": "𐌰𐌱𐌲𐌳𐌴𐌵𐌶𐌷𐌸𐌹"
+ },
+ {
+  "name": "Grantha",
+  "sample": "ᳲᳳ𑌅𑌆𑌇𑌈𑌉𑌊𑌋𑌌"
+ },
+ {
+  "name": "Gunjala Gondi",
+  "sample": "𑵠𑵡𑵢𑵣𑵤𑵥𑵧𑵨𑵪𑵫"
+ },
+ {
+  "name": "Hanifi Rohingya",
+  "sample": "𐴀𐴁𐴂𐴃𐴄𐴅𐴆𐴇𐴈𐴉"
+ },
+ {
+  "name": "Hanunoo",
+  "sample": "ᜠᜡᜢᜣᜤᜥᜦᜧᜨᜩ"
+ },
+ {
+  "name": "Hatran",
+  "sample": "𐣠𐣡𐣢𐣣𐣤𐣥𐣦𐣧𐣨𐣩"
+ },
+ {
+  "name": "ImpAramaic",
+  "sample": "𐡀𐡁𐡂𐡃𐡄𐡅𐡆𐡇𐡈𐡉"
+ },
+ {
+  "name": "Indic Siyaq Numbers",
+  "sample": "𞱱𞱲𞱳𞱴𞱵𞱶𞱷𞱸𞱹𞱺"
+ },
+ {
+  "name": "InsPahlavi",
+  "sample": "𐭠𐭡𐭢𐭣𐭤𐭥𐭦𐭧𐭨𐭩"
+ },
+ {
+  "name": "Inscriptional Parthian",
+  "sample": "𐭀𐭁𐭂𐭃𐭄𐭅𐭆𐭇𐭈𐭉"
+ },
+ {
+  "name": "Javanese",
+  "sample": "ꦧꦱꦗꦮ"
+ },
+ {
+  "name": "Kaithi",
+  "sample": "꠰꠱꠲꠳꠴꠵꠶꠷꠸꠹"
+ },
+ {
+  "name": "Kawi",
+  "sample": "𑼂𑼄𑼅𑼆𑼇𑼈𑼉𑼊𑼋𑼌"
+ },
+ {
+  "name": "Kayah Li",
+  "sample": "꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉"
+ },
+ {
+  "name": "Kharoshthi",
+  "sample": "𐨀𐨐𐨑𐨒𐨓𐨕𐨖𐨗𐨙𐨚"
+ },
+ {
+  "name": "Khmer",
+  "sample": "ភាសាខ្មែរ"
+ },
+ {
+  "name": "Khojki",
+  "sample": "𑈀𑈁𑈂𑈃𑈄𑈅𑈆𑈇𑈈𑈉"
+ },
+ {
+  "name": "Khudawadi",
+  "sample": "𑊰𑊱𑊲𑊳𑊴𑊵𑊶𑊷𑊸𑊹"
+ },
+ {
+  "name": "Lao",
+  "sample": "ພາສາລາວ"
+ },
+ {
+  "name": "Lepcha",
+  "sample": "ᰀᰁᰂᰃᰄᰅᰆᰇᰈᰉ"
+ },
+ {
+  "name": "Limbu",
+  "sample": "ᤀᤁᤂᤃᤄᤅᤆᤇᤈᤉ"
+ },
+ {
+  "name": "Linear A",
+  "sample": "𐘀𐘁𐘂𐘃𐘄𐘅𐘆𐘇𐘈𐘉"
+ },
+ {
+  "name": "Linear B",
+  "sample": "𐀀𐀁𐀂𐀃𐀄𐀅𐀆𐀇𐀈𐀉"
+ },
+ {
+  "name": "Lisu",
+  "sample": "ꓐꓑꓒꓓꓔꓕꓖꓗꓘꓙ"
+ },
+ {
+  "name": "Lycian",
+  "sample": "𐊀𐊁𐊂𐊃𐊄𐊅𐊆𐊇𐊈𐊉"
+ },
+ {
+  "name": "Lydian",
+  "sample": "𐤠𐤡𐤢𐤣𐤤𐤥𐤦𐤧𐤨𐤩"
+ },
+ {
+  "name": "Mahajani",
+  "sample": "𑅐𑅑𑅒𑅓𑅔𑅕𑅖𑅗𑅘𑅙"
+ },
+ {
+  "name": "Mandaic",
+  "sample": "ࡀࡁࡂࡃࡄࡅࡆࡇࡈࡉ"
+ },
+ {
+  "name": "Manichaean",
+  "sample": "𐫀𐫁𐫂𐫃𐫄𐫅𐫆𐫇𐫈𐫉"
+ },
+ {
+  "name": "Marchen",
+  "sample": "𑱲𑱳𑱴𑱵𑱶𑱷𑱸𑱹𑱺𑱻"
+ },
+ {
+  "name": "Masaram Gondi",
+  "sample": "𑴀𑴁𑴂𑴃𑴄𑴅𑴆𑴈𑴉𑴋"
+ },
+ {
+  "name": "Mayan Numerals",
+  "sample": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩"
+ },
+ {
+  "name": "Medefaidrin",
+  "sample": "𖹀𖹁𖹂𖹃𖹄𖹅𖹆𖹇𖹈𖹉"
+ },
+ {
+  "name": "Meetei Mayek",
+  "sample": "ꫠꫡꫢꫣꫤꫥꫦꫧꫨꫩ"
+ },
+ {
+  "name": "Mende Kikakui",
+  "sample": "𞠀𞠁𞠂𞠃𞠄𞠅𞠆𞠇𞠈𞠉"
+ },
+ {
+  "name": "Meroitic",
+  "sample": "𐦀𐦁𐦂𐦃𐦄𐦅𐦆𐦇𐦈𐦉"
+ },
+ {
+  "name": "Miao",
+  "sample": "𖼀𖼁𖼂𖼃𖼄𖼅𖼆𖼇𖼈𖼉"
+ },
+ {
+  "name": "Modi",
+  "sample": "𑘀𑘁𑘂𑘃𑘄𑘅𑘆𑘇𑘈𑘉"
+ },
+ {
+  "name": "Mongolian",
+  "sample": "ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ"
+ },
+ {
+  "name": "Mro",
+  "sample": "𖩀𖩁𖩂𖩃𖩄𖩅𖩆𖩇𖩈𖩉"
+ },
+ {
+  "name": "Multani",
+  "sample": "𑊀𑊁𑊂𑊃𑊄𑊅𑊆𑊈𑊊𑊋"
+ },
+ {
+  "name": "Myanmar",
+  "sample": "မြန်မာဘာသာ"
+ },
+ {
+  "name": "NKo Unjoined",
+  "sample": "߾߿"
+ },
+ {
+  "name": "Nabataean",
+  "sample": "𐢀𐢁𐢂𐢃𐢄𐢅𐢆𐢇𐢈𐢉"
+ },
+ {
+  "name": "Nag Mundari",
+  "sample": "𞓐𞓑𞓒𞓓𞓔𞓕𞓖𞓗𞓘𞓙"
+ },
+ {
+  "name": "Nandinagari",
+  "sample": "ᳩᳺ𑦠𑦡𑦢𑦣𑦤𑦥𑦦𑦧"
+ },
+ {
+  "name": "New Tai Lue",
+  "sample": "ᦀᦁᦂᦃᦄᦅᦆᦇᦈᦉ"
+ },
+ {
+  "name": "Newa",
+  "sample": "𑐀𑐁𑐂𑐃𑐄𑐅𑐆𑐇𑐈𑐉"
+ },
+ {
+  "name": "Nushu",
+  "sample": "𖿡𛅰𛅱𛅲𛅳𛅴𛅵𛅶𛅷𛅸"
+ },
+ {
+  "name": "Ol Chiki",
+  "sample": "᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙"
+ },
+ {
+  "name": "Old Hungarian",
+  "sample": "𐲀𐲁𐲂𐲃𐲄𐲅𐲆𐲇𐲈𐲉"
+ },
+ {
+  "name": "Old Italic",
+  "sample": "𐌭𐌮𐌯"
+ },
+ {
+  "name": "Old North Arabian",
+  "sample": "𐪀𐪁𐪂𐪃𐪄𐪅𐪆𐪇𐪈𐪉"
+ },
+ {
+  "name": "Old Permic",
+  "sample": "𐍐𐍑𐍒𐍓𐍔𐍕𐍖𐍗𐍘𐍙"
+ },
+ {
+  "name": "Old Persian",
+  "sample": "𐎠𐎡𐎢𐎣𐎤𐎥𐎦𐎧𐎨𐎩"
+ },
+ {
+  "name": "OldSogdian",
+  "sample": "𐼀𐼁𐼂𐼃𐼄𐼅𐼆𐼇𐼈𐼉"
+ },
+ {
+  "name": "Old South Arabian",
+  "sample": "𐩠𐩡𐩢𐩣𐩤𐩥𐩦𐩧𐩨𐩩"
+ },
+ {
+  "name": "Old Turkic",
+  "sample": "𐰀𐰁𐰂𐰃𐰄𐰅𐰆𐰇𐰈𐰉"
+ },
+ {
+  "name": "Oriya",
+  "sample": "ଓଡ଼ିଆ"
+ },
+ {
+  "name": "Osage",
+  "sample": "𐒰𐒱𐒲𐒳𐒴𐒵𐒶𐒷𐒸𐒹"
+ },
+ {
+  "name": "Osmanya",
+  "sample": "𐒀𐒁𐒂𐒃𐒄𐒅𐒆𐒇𐒈𐒉"
+ },
+ {
+  "name": "Pahawh Hmong",
+  "sample": "𖬀𖬁𖬂𖬃𖬄𖬅𖬆𖬇𖬈𖬉"
+ },
+ {
+  "name": "Palmyrene",
+  "sample": "𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧𐡨𐡩"
+ },
+ {
+  "name": "Pau Cin Hau",
+  "sample": "𑫀𑫁𑫂𑫃𑫄𑫅𑫆𑫇𑫈𑫉"
+ },
+ {
+  "name": "PhagsPa",
+  "sample": "ꡀꡁꡂꡃꡄꡅꡆꡇꡈꡉ"
+ },
+ {
+  "name": "Phoenician",
+  "sample": "𐤀𐤁𐤂𐤃𐤄𐤅𐤆𐤇𐤈𐤉"
+ },
+ {
+  "name": "PsaPahlavi",
+  "sample": "𐮀𐮁𐮂𐮃𐮄𐮅𐮆𐮇𐮈𐮉"
+ },
+ {
+  "name": "Rejang",
+  "sample": "ꤰꤱꤲꤳꤴꤵꤶꤷꤸꤹ"
+ },
+ {
+  "name": "Runic",
+  "sample": "ᚠᚡᚢᚣᚤᚥᚦᚧᚨᚩ"
+ },
+ {
+  "name": "Samaritan",
+  "sample": "ࠀࠁࠂࠃࠄࠅࠆࠇࠈࠉ"
+ },
+ {
+  "name": "Saurashtra",
+  "sample": "ꢂꢃꢄꢅꢆꢇꢈꢉꢊꢋ"
+ },
+ {
+  "name": "Sharada",
+  "sample": "𑆃𑆄𑆅𑆆𑆇𑆈𑆉𑆊𑆋𑆌"
+ },
+ {
+  "name": "Shavian",
+  "sample": "𐑐𐑑𐑒𐑓𐑔𐑕𐑖𐑗𐑘𐑙"
+ },
+ {
+  "name": "Siddham",
+  "sample": "𑖀𑖁𑖂𑖃𑖄𑖅𑖆𑖇𑖈𑖉"
+ },
+ {
+  "name": "Sogdian",
+  "sample": "𐼰𐼱𐼲𐼳𐼴𐼵𐼶𐼷𐼸𐼹"
+ },
+ {
+  "name": "Sora Sompeng",
+  "sample": "𑃐𑃑𑃒𑃓𑃔𑃕𑃖𑃗𑃘𑃙"
+ },
+ {
+  "name": "Soyombo",
+  "sample": "𑩐𑩜𑩝𑩞𑩟𑩠𑩡𑩢𑩣𑩤"
+ },
+ {
+  "name": "Sundanese",
+  "sample": "ᮘᮞ ᮞᮥᮔ᮪ᮓ"
+ },
+ {
+  "name": "Sunuwar",
+  "sample": "𑯀𑯁𑯂𑯃𑯄𑯅𑯆𑯇𑯈𑯉"
+ },
+ {
+  "name": "Syloti Nagri",
+  "sample": "ꠀꠁꠃꠄꠅꠇꠈꠉꠊꠌ"
+ },
+ {
+  "name": "Syriac",
+  "sample": "ܠܫܢܐ ܣܘܪܝܝܐ"
+ },
+ {
+  "name": "Tagalog",
+  "sample": "ᜀᜁᜂᜃᜄᜅᜆᜇᜈᜉ"
+ },
+ {
+  "name": "Tagbanwa",
+  "sample": "ᝠᝡᝢᝣᝤᝥᝦᝧᝨᝩ"
+ },
+ {
+  "name": "Tai Le",
+  "sample": "ᥐᥑᥒᥓᥔᥕᥖᥗᥘᥙ"
+ },
+ {
+  "name": "Tai Tham",
+  "sample": "ᨽᩣᩈᩣᨴᩱ"
+ },
+ {
+  "name": "Tai Viet",
+  "sample": "ꪀꪁꪂꪃꪄꪅꪆꪇꪈꪉ"
+ },
+ {
+  "name": "Takri",
+  "sample": "𑚀𑚁𑚂𑚃𑚄𑚅𑚆𑚇𑚈𑚉"
+ },
+ {
+  "name": "Tangsa",
+  "sample": "𖩰𖩱𖩲𖩳𖩴𖩵𖩶𖩷𖩸𖩹"
+ },
+ {
+  "name": "Thaana",
+  "sample": "ދިވެހި"
+ },
+ {
+  "name": "Tifinagh",
+  "sample": ""
+ },
+ {
+  "name": "Tirhuta",
+  "sample": "𑒀𑒁𑒂𑒃𑒄𑒅𑒆𑒇𑒈𑒉"
+ },
+ {
+  "name": "Ugaritic",
+  "sample": "𐎀𐎁𐎂𐎃𐎄𐎅𐎆𐎇𐎈𐎉"
+ },
+ {
+  "name": "Vai",
+  "sample": "ꔀꔁꔂꔃꔄꔅꔆꔇꔈꔉ"
+ },
+ {
+  "name": "Vithkuqi",
+  "sample": "𐕰𐕱𐕲𐕳𐕴𐕵𐕶𐕷𐕸𐕹"
+ },
+ {
+  "name": "Wancho",
+  "sample": "𞋀𞋁𞋂𞋃𞋄𞋅𞋆𞋇𞋈𞋉"
+ },
+ {
+  "name": "Warang Citi",
+  "sample": "𑢠𑢡𑢢𑢣𑢤𑢥𑢦𑢧𑢨𑢩"
+ },
+ {
+  "name": "Yi",
+  "sample": "ꀀꀁꀂꀃꀄꀅꀆꀇꀈꀉ"
+ },
+ {
+  "name": "Zanabazar Square",
+  "sample": "𑨀𑨋𑨌𑨍𑨎𑨏𑨐𑨑𑨒𑨓"
+ },
+ {
+  "name": "Ahom",
+  "sample": "𑜀𑜁𑜂𑜃𑜄𑜅𑜆𑜇𑜈𑜉"
+ },
+ {
+  "name": "Dives Akuru",
+  "sample": "𑤀𑤂𑤄𑤆𑤉𑤌𑤎𑤐𑤖𑤘"
+ },
+ {
+  "name": "Dogra",
+  "sample": "𑠀𑠁𑠂𑠃𑠄𑠅𑠆𑠇𑠈𑠉"
+ },
+ {
+  "name": "Hentaigana",
+  "sample": "𛀀𛀁𛀂𛀃𛀄𛀅𛀆𛀇𛀈𛀉"
+ },
+ {
+  "name": "Khitan Small Script",
+  "sample": "𘬀𘬁𘬂𘬃𘬄𘬅𘬆𘬇𘬈𘬉"
+ },
+ {
+  "name": "Makasar",
+  "sample": "𑻠𑻡𑻢𑻣𑻤𑻥𑻦𑻧𑻨𑻩"
+ },
+ {
+  "name": "NP Hmong",
+  "sample": "𞄀𞄁𞄂𞄃𞄄𞄅𞄆𞄇𞄈𞄉"
+ },
+ {
+  "name": "Old Uyghur",
+  "sample": "𐽰𐽱𐽲𐽳𐽴𐽵𐽶𐽷𐽸𐽹"
+ },
+ {
+  "name": "Ottoman Siyaq",
+  "sample": "𞴁𞴂𞴃𞴄𞴅𞴆𞴇𞴈𞴉𞴊"
+ },
+ {
+  "name": "Tibetan",
+  "sample": "བོད་ཡིག"
+ },
+ {
+  "name": "Todhri",
+  "sample": "𐗀𐗁𐗂𐗃𐗄𐗅𐗆𐗇𐗈𐗉"
+ },
+ {
+  "name": "Toto",
+  "sample": "𞊐𞊑𞊒𞊓𞊔𞊕𞊖𞊗𞊘𞊙"
+ },
+ {
+  "name": "Yezidi",
+  "sample": "𐺀𐺁𐺂𐺃𐺄𐺅𐺆𐺇𐺈𐺉"
+ },
+ {
+  "name": "Noto Znamenny Musical Notation",
+  "sample": "𜽐𜽑𜽒𜽓𜽔𜽕𜽖𜽗𜽘𜽙"
+ },
+ {
+  "name": "Symbols",
+  "sample": "🄱🄻🄰🄲🄺 🅑🅛🅐🅒🅚"
+ },
+ {
+  "name": "Symbols 2",
+  "sample": "⏴⏵⏶⏷⏻⏼⏽⏾⏿␤"
+ },
+ {
+  "name": "Math",
+  "sample": "𝓑𝓵𝓪𝓬𝓴𝓑𝓮𝓻𝓻𝔂 𝔅𝔩𝔞𝔠𝔨 𝐁𝐥𝐚𝐜𝐤 𝙱𝚕𝚊𝚌𝚔"
+ },
+ {
+  "name": "Noto Music",
+  "sample": "𝀀𝀁𝀂𝀃𝀄𝀅𝀆𝀇𝀈𝀉"
+ },
+ {
+  "name": "Noto Sans",
+  "sample": "ԦԧԨԩԪԫԬԭԮԯ"
+ }
+]

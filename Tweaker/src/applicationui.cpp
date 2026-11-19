@@ -21,6 +21,7 @@
 #include "Certificates.hpp"
 #include "Changelog.hpp"
 #include "EmojiFont.hpp"
+#include "ScriptFonts.hpp"
 #include "Settings.hpp"
 #include "SystemTheme.hpp"
 
@@ -72,6 +73,7 @@ ApplicationUI::ApplicationUI() :
     context->setContextProperty("settings", settings);
     context->setContextProperty("changelog", new tweaker::Changelog(this));
     context->setContextProperty("emojiFont", new tweaker::EmojiFont(this));
+    context->setContextProperty("scriptFonts", new tweaker::ScriptFonts(this));
     context->setContextProperty("certificates", new tweaker::Certificates(this));
     context->setContextProperty("systemTheme", new tweaker::SystemTheme(this));
 

@@ -11,6 +11,7 @@ HEADERS += \
     $$TWEAKER_CORE_DIR/Settings.hpp \
     $$TWEAKER_CORE_DIR/Changelog.hpp \
     $$TWEAKER_CORE_DIR/EmojiFont.hpp \
+    $$TWEAKER_CORE_DIR/ScriptFonts.hpp \
     $$TWEAKER_CORE_DIR/Certificates.hpp \
     $$TWEAKER_CORE_DIR/SystemTheme.hpp
 
@@ -18,6 +19,7 @@ SOURCES += \
     $$TWEAKER_CORE_DIR/Settings.cpp \
     $$TWEAKER_CORE_DIR/Changelog.cpp \
     $$TWEAKER_CORE_DIR/EmojiFont.cpp \
+    $$TWEAKER_CORE_DIR/ScriptFonts.cpp \
     $$TWEAKER_CORE_DIR/Certificates.cpp \
     $$TWEAKER_CORE_DIR/SystemTheme.cpp
 

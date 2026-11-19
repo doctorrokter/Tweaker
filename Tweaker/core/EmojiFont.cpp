@@ -24,7 +24,7 @@ const char* const kStyleNoto = "noto";
 const int kScriptTimeoutMs = 120 * 1000;        // copies a font of up to kMaxFontBytes
 const qint64 kMaxFontBytes = 64 * 1024 * 1024;
 
-// The real path of a file of the package: the root shell runs outside our sandbox.
+// The real path of a file of the package: the system user's shell runs outside our sandbox.
 QString packageFile(const char* name)
 {
     return QFileInfo(QDir::currentPath() + QString::fromLatin1("/app/native/") + QString::fromLatin1(name)).canonicalFilePath();
@@ -178,7 +178,7 @@ void EmojiFont::onScriptFinished(const QString& verdict, const QString& output)
     const bool succeeded = verdict == QLatin1String("ok") || verdict == QLatin1String("same");
 
     if (action == UpdatingHook) {
-        // Not the user's doing, and early after a boot root is not up yet: the next start of the app tries again.
+        // Not the user's doing, and early after a boot the system user is not up yet: the next start of the app tries again.
         if (!succeeded) {
             qWarning() << "[emojiFont] the boot start was not updated:" << output.simplified();
         }

@@ -42,7 +42,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../bb-shared/ui/qml/BuyMeACoffee.qml" line="292"/>
+        <location filename="../../bb-shared/ui/qml/BuyMeACoffee.qml" line="287"/>
         <source>Link copied to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -270,6 +270,72 @@
     </message>
 </context>
 <context>
+    <name>ScriptFontsPage</name>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="114"/>
+        <source>What it adds: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="21"/>
+        <source>Rare alphabets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="47"/>
+        <source>Letters of rare alphabets in every app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="76"/>
+        <source>Names and messages are often written with letters of other alphabets that look like ours, with hieroglyphs or symbols: Gothic, Tai, Cherokee, Egyptian hieroglyphs, mathematical letters. The phone has no fonts for many of them and shows empty boxes. Tweaker adds free Noto fonts for nearly 150 scripts and symbol sets to every app.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="81"/>
+        <source>Now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="97"/>
+        <source>With these fonts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="127"/>
+        <source>On, not applied yet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="150"/>
+        <source>Working...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptFontsPage.qml" line="169"/>
+        <source>Other apps pick up the fonts once you close and reopen them.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ScriptSamplesPage</name>
+    <message>
+        <location filename="../assets/pages/ScriptSamplesPage.qml" line="12"/>
+        <source>While the fonts are off, the phone shows empty boxes here.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptSamplesPage.qml" line="15"/>
+        <source>Close Tweaker and open it again to see the letters here.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/ScriptSamplesPage.qml" line="25"/>
+        <source>What it adds</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SettingsPage</name>
     <message>
         <location filename="../assets/pages/SettingsPage.qml" line="21"/>
@@ -335,58 +401,123 @@
 <context>
     <name>TweaksPage</name>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="21"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="64"/>
+        <source>Rare alphabets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/pages/TweaksPage.qml" line="22"/>
         <source>On</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="23"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="24"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="28"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="29"/>
         <source>Up to date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="30"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="31"/>
         <source>Not updated</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="41"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="42"/>
         <source>Hub dark, the rest light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="43"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="44"/>
         <source>Hub light, the rest dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="54"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="55"/>
         <source>Emoji font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="63"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="73"/>
         <source>Certificates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="72"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="82"/>
         <source>System theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="38"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="39"/>
         <source>Light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/pages/TweaksPage.qml" line="35"/>
+        <location filename="../assets/pages/TweaksPage.qml" line="36"/>
         <source>Dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>bbshared::CameraView</name>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="366"/>
+        <source>The camera&apos;s picture has no window (screen context, errno %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="371"/>
+        <source>The camera&apos;s picture has no window (errno %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="383"/>
+        <source>The camera&apos;s picture has no window (its properties, errno %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="544"/>
+        <source>The app has no access to the camera: allow it in Settings &gt; Security and Privacy &gt; Application Permissions (error %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="547"/>
+        <source>The camera is busy in another app (error %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="549"/>
+        <source>The camera did not open (error %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="551"/>
+        <source>The camera&apos;s viewfinder was refused (error %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="553"/>
+        <source>The camera&apos;s viewfinder did not start (error %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="582"/>
+        <source>The camera was taken by another app (status %1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="608"/>
+        <source>The camera&apos;s picture cannot be drawn (%1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="898"/>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="909"/>
+        <location filename="../../bb-shared/camera/CameraView.cpp" line="914"/>
+        <source>The picture cannot be opened (%1).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -432,6 +563,14 @@
     <message>
         <location filename="../core/EmojiFont.cpp" line="253"/>
         <source>This font has no colour bitmaps (CBDT and CBLC tables), and the system draws no other emoji.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>tweaker::ScriptFonts</name>
+    <message>
+        <location filename="../core/ScriptFonts.cpp" line="69"/>
+        <source>This phone has no root wrapper (__root): Tweaker cannot change anything here.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

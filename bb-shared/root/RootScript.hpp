@@ -1,6 +1,6 @@
 /*
- * bb-shared / root / RootScript.hpp - runs a shell script of the app's package as root, through the root
- * wrapper of a rooted phone (BB10-ROOT-AUTOSTART.md, section 4). CONFIG += bb_shared_root.
+ * bb-shared / root / RootScript.hpp - runs a shell script of the app's package as the system user, through the kit's
+ * wrapper on a phone with the system kit (BB10-SYSTEM-AUTOSTART.md, section 4). CONFIG += bb_shared_root.
  *
  *     m_script = new bbshared::RootScript(this);
  *     connect(m_script, SIGNAL(finished(QString, QString)), this, SLOT(onDone(QString, QString)));

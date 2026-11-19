@@ -1,5 +1,13 @@
 [
     {
+        "version": "1.1.0",
+        "date": "2026-11-19",
+        "changes": [
+            "Litery rzadkich alfabetów, hieroglify, dawne pisma i ozdobne litery matematyczne są teraz widoczne we wszystkich aplikacjach zamiast pustych kwadratów.",
+            "Nowsze emoji nie wyświetlają się już w aplikacjach jako puste kwadraty."
+        ]
+    },
+    {
         "version": "1.0.1",
         "date": "2026-11-10",
         "changes": [

@@ -18,7 +18,7 @@ equals(BBT_ENV, production) {
 }
 
 # Shared BB10 code: the L10n language layer; `dimens`, the spacing of the service pages; Loader and the settings rows;
-# the Help sheet's "Buy me a coffee" card; running a script as root.
+# the Help sheet's "Buy me a coffee" card; running a script as the system user.
 # bb-shared sits next to this project.
 CONFIG += bb_shared_dimens bb_shared_ui bb_shared_coffee bb_shared_root
 include(../bb-shared/bb-shared.pri)

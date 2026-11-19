@@ -1,11 +1,13 @@
 #!/bin/sh
 #
-# tweaker-boot.sh - Tweaker's root side, one file run in two ways (bb-shared/BB10-ROOT-AUTOSTART.md).
+# tweaker-boot.sh - Tweaker's system side, one file run in two ways (bb-shared/BB10-SYSTEM-AUTOSTART.md).
 #
-# From the app, through the root wrapper, this file fed to a shell on stdin:
+# From the app, through the kit's wrapper, this file fed to a shell on stdin:
 #     /bin/ksh -s install  '<this file>' < '<this file>'             the boot start in place
-#     /bin/ksh -s font-on  '<this file>' '<a font>' < '<this file>'  the font copied in, linked, the Hub restarted
+#     /bin/ksh -s font-on  '<this file>' '<a font>' < '<this file>'  the font copied in, linked, the Cascades host stopped, the Hub restarted
 #     /bin/ksh -s font-off '<this file>' < '<this file>'             the link and the font gone, the Hub restarted
+#     /bin/ksh -s scripts-on '<this file>' '<a folder>' < '<this file>'  the fonts of rare alphabets copied in, linked and named in the lists
+#     /bin/ksh -s scripts-off '<this file>' < '<this file>'          those fonts and their place in the lists gone
 #     /bin/ksh -s certs-update '<this file>' '<a folder>' '<the store tool>' < '<this file>'  the roots imported, the expired ones removed
 #     /bin/ksh -s system-theme '<this file>' black|white < '<this file>'  the theme of everything that takes the system's
 #     /bin/ksh -s hub-theme '<this file>' black|white '<light icons>' < '<this file>'  the Hub and email, apart from the rest
@@ -23,7 +25,7 @@
 # at every boot, so without this script a reboot gives the phone back as it was.
 #
 # Safety (the same rules as Tunnel's boot script):
-#   - Off switch, no root needed: a file or a folder named tweaker-off in the shared misc folder (File Manager,
+#   - Off switch, no system user needed: a file or a folder named tweaker-off in the shared misc folder (File Manager,
 #     the PC over USB). While it is there nothing is applied at boot.
 #   - Boot-loop breaker: a guard file before applying, removed after $SETTLE s or on a clean stop. If the phone
 #     went down within those seconds, the next boot applies nothing, once.
@@ -47,6 +49,10 @@ SYSTEM_FONT=/base/usr/fonts/font_repository/monotype/NotoColorEmoji.ttf
 SYSTEM_LISTS=/base/usr/fonts/font_repository/monotype
 OUR_LISTS=$ADDON/lists
 LIST_NAMES="SlatePro-Regular_Color.cfr SlatePro-Medium_Color.cfr SlatePro-Light_Color.cfr SlatePro-Bold_Color.cfr SlatePro-Italic_Color.cfr SlatePro-MediumItalic_Color.cfr SlatePro-LightItalic_Color.cfr SlatePro-BoldItalic_Color.cfr"
+# Fonts for letters of rare alphabets (Noto, SIL OFL) and the components that name them, put into every list after the
+# languages' own fonts: each names only what no font of the system has.
+SCRIPT_FONTS=$ADDON/script-fonts
+SCRIPT_PART=$SCRIPT_FONTS/components.cfr-part
 # The certificate manager's own databases and its user. A manual import writes to the first two; shared_trusted exists
 # only on a phone that has had one.
 WEB_STORE=/var/certdb/personal/certdb/certmgr/web_trusted/certstore.db
@@ -65,6 +71,9 @@ THEME_DARK=$ADDON/theme-dark
 DARK_STYLE_PAGES="sys.pim.messages:MessageList.qml sys.pim.messages:mainwaitscreen.qml sys.pim.email.card:Viewer.qml sys.pim.email.composer.card:compose.qml sys.pim.attachments.card:Attachments.qml"
 THEME_TMP=/tmp/tweaker-theme.tmp
 GUARD=$ADDON/boot-guard
+# One change at a time: each tweak of the app runs this script, and two runs at once would remake the same lists.
+LOCK=$ADDON/lock
+LOCK_WAIT=120 # s
 SETTLE=60
 APPS=/apps
 APPDATA=/accounts/1000/appdata
@@ -75,7 +84,7 @@ LOG_LIMIT=65536 # bytes; a bigger log moves to *.old.txt
 
 mode=boot
 case "$1" in
-    install | font-on | font-off | certs-update | system-theme | hub-theme)
+    install | font-on | font-off | scripts-on | scripts-off | certs-update | system-theme | hub-theme)
         mode=$1
         mkdir -p "$ADDON" < /dev/null 2> /dev/null
         ;;
@@ -124,6 +133,31 @@ fail() {
     echo "reason=$*"
     echo "result=failed"
     exit 0
+}
+
+# Waits until no other run of this script is changing anything, up to LOCK_WAIT s, then holds the lock till this run
+# ends. A lock whose run is gone (killed, or a reboot) is taken over. Returns 1 when the other run is still going.
+take_lock() {
+    waited=0
+    while ! mkdir "$LOCK" 2> /dev/null < /dev/null; do
+        holder=$(cat "$LOCK/pid" 2> /dev/null < /dev/null)
+        if [ -n "$holder" ] && ! kill -0 "$holder" 2> /dev/null; then
+            rm -rf "$LOCK" < /dev/null
+            log "lock: taken over from $holder, which is gone"
+            continue
+        fi
+        if [ "$waited" -ge "$LOCK_WAIT" ]; then
+            return 1
+        fi
+        sleep 1 < /dev/null
+        waited=$((waited + 1))
+    done
+    echo $$ > "$LOCK/pid"
+    trap 'rm -rf "$LOCK"' 0
+    if [ "$waited" -gt 0 ]; then
+        log "lock: waited $waited s for another change"
+    fi
+    return 0
 }
 
 # $1 into $2 with mode $3, whole or not there: a copy under *.new, then mv. Not when the same file is there
@@ -210,9 +244,9 @@ unlink_font() {
     return 0
 }
 
-# Our copies of the descriptions, with the emoji range opened up to U+1FAFF, each made from the system's own file. A
-# file already linked is ours: the system's cannot be read through the link and there is nothing to make. Returns 1 with
-# list_error set; the '.' in the patterns stands for the backslash of Ὠ0.
+# Our copies of the descriptions, each made from the system's own file, which can be read only while our link is not
+# over it: with the emoji tweak on the emoji range is opened up to U+1FAFF, with the script fonts on their components go
+# in after the languages' own fonts. Returns 1 with list_error set; the '.' in the patterns stands for the backslash of Ὠ0.
 make_lists() {
     if ! list_error=$( { mkdir -p "$OUR_LISTS" && chmod 755 "$OUR_LISTS"; } 2>&1 < /dev/null ); then
         return 1
@@ -220,29 +254,55 @@ make_lists() {
     for list_name in $LIST_NAMES; do
         system_list=$SYSTEM_LISTS/$list_name
         our_list=$OUR_LISTS/$list_name
-        case "$(ls -l "$system_list" 2>&1 < /dev/null)" in
-            *" -> $our_list"*)
-                continue
-                ;;
-        esac
-        if ! grep 'u1f680-.u1f6c5' "$system_list" > /dev/null 2>&1 < /dev/null || ! grep 'u231a-.u231b' "$system_list" > /dev/null 2>&1 < /dev/null; then
-            list_error="$list_name has no emoji range this script knows"
+        rm -f "$our_list.step" "$our_list.new" < /dev/null
+        if [ -e "$ON/emoji-font" ]; then
+            if ! make_emoji_list; then
+                return 1
+            fi
+        elif ! list_error=$(cp "$system_list" "$our_list.step" 2>&1 < /dev/null); then
             return 1
         fi
-        rm -f "$our_list.new" < /dev/null
-        # Below U+1F000 exactly what the font has, not a wide range: components after this one serve the rest.
-        if ! list_error=$( { sed -e '/name="Noto Color Emoji"/,/\/ComponentDef/s/u1f680-\\u1f6c5/u1f680-\\u1faff/' -e '/name="Noto Color Emoji"/,/\/ComponentDef/s/\[\\u231a-\\u231b\].*\[\\u3030\]/[\\ua9] [\\uae] [\\u203c] [\\u2049] [\\u20e3] [\\u2122] [\\u2139] [\\u2194-\\u2199] [\\u21a9-\\u21aa] [\\u231a-\\u231b] [\\u2328] [\\u23cf] [\\u23e9-\\u23f3] [\\u23f8-\\u23fa] [\\u24c2] [\\u25aa-\\u25ab] [\\u25b6] [\\u25c0] [\\u25fb-\\u25fe] [\\u2600-\\u2604] [\\u260e] [\\u2611] [\\u2614-\\u2615] [\\u2618] [\\u261d] [\\u2620] [\\u2622-\\u2623] [\\u2626] [\\u262a] [\\u262e-\\u262f] [\\u2638-\\u263a] [\\u2640] [\\u2642] [\\u2648-\\u2653] [\\u265f-\\u2660] [\\u2663] [\\u2665-\\u2666] [\\u2668] [\\u267b] [\\u267e-\\u267f] [\\u2692-\\u2697] [\\u2699] [\\u269b-\\u269c] [\\u26a0-\\u26a1] [\\u26a7] [\\u26aa-\\u26ab] [\\u26b0-\\u26b1] [\\u26bd-\\u26be] [\\u26c4-\\u26c5] [\\u26c8] [\\u26ce-\\u26cf] [\\u26d1] [\\u26d3-\\u26d4] [\\u26e9-\\u26ea] [\\u26f0-\\u26f5] [\\u26f7-\\u26fa] [\\u26fd] [\\u2702] [\\u2705] [\\u2708-\\u270d] [\\u270f] [\\u2712] [\\u2714] [\\u2716] [\\u271d] [\\u2721] [\\u2728] [\\u2733-\\u2734] [\\u2744] [\\u2747] [\\u274c] [\\u274e] [\\u2753-\\u2755] [\\u2757] [\\u2763-\\u2764] [\\u2795-\\u2797] [\\u27a1] [\\u27b0] [\\u27bf] [\\u2934-\\u2935] [\\u2b05-\\u2b07] [\\u2b1b-\\u2b1c] [\\u2b50] [\\u2b55] [\\u3030] [\\u303d] [\\u3297] [\\u3299]/' < "$system_list" > "$our_list.new" && chmod 644 "$our_list.new"; } 2>&1 ); then
+        if [ -e "$ON/script-fonts" ]; then
+            if ! grep '</LanguagePreferredList>' "$our_list.step" > /dev/null 2>&1 < /dev/null; then
+                list_error="$list_name has no place for the script fonts this script knows"
+                rm -f "$our_list.step" < /dev/null
+                return 1
+            fi
+            if ! list_error=$(sed -e "/<\/LanguagePreferredList>/r $SCRIPT_PART" < "$our_list.step" 2>&1 > "$our_list.new"); then
+                rm -f "$our_list.step" "$our_list.new" < /dev/null
+                return 1
+            fi
+            if ! grep 'locationHint="NotoSansGothic-Regular.ttf"' "$our_list.new" > /dev/null 2>&1 < /dev/null; then
+                list_error="the script fonts did not go into $list_name"
+                rm -f "$our_list.step" "$our_list.new" < /dev/null
+                return 1
+            fi
+            rm -f "$our_list.step" < /dev/null
+        elif ! list_error=$(mv -f "$our_list.step" "$our_list.new" 2>&1 < /dev/null); then
             return 1
         fi
-        if ! grep 'u1f680-.u1faff' "$our_list.new" > /dev/null 2>&1 < /dev/null || ! grep 'u2763-.u2764' "$our_list.new" > /dev/null 2>&1 < /dev/null; then
-            list_error="$list_name was not changed"
-            rm -f "$our_list.new" < /dev/null
-            return 1
-        fi
-        if ! list_error=$(mv -f "$our_list.new" "$our_list" 2>&1 < /dev/null); then
+        if ! list_error=$( { chmod 644 "$our_list.new" && mv -f "$our_list.new" "$our_list"; } 2>&1 < /dev/null ); then
             return 1
         fi
     done
+    return 0
+}
+
+# $system_list with the emoji range opened, into $our_list.step. Returns 1 with list_error set.
+make_emoji_list() {
+    if ! grep 'u1f680-.u1f6c5' "$system_list" > /dev/null 2>&1 < /dev/null || ! grep 'u231a-.u231b' "$system_list" > /dev/null 2>&1 < /dev/null; then
+        list_error="$list_name has no emoji range this script knows"
+        return 1
+    fi
+    # Below U+1F000 exactly what the font has, not a wide range: components after this one serve the rest.
+    if ! list_error=$( { sed -e '/name="Noto Color Emoji"/,/\/ComponentDef/s/u1f680-\\u1f6c5/u1f680-\\u1faff/' -e '/name="Noto Color Emoji"/,/\/ComponentDef/s/\[\\u231a-\\u231b\].*\[\\u3030\]/[\\ua9] [\\uae] [\\u203c] [\\u2049] [\\u20e3] [\\u2122] [\\u2139] [\\u2194-\\u2199] [\\u21a9-\\u21aa] [\\u231a-\\u231b] [\\u2328] [\\u23cf] [\\u23e9-\\u23f3] [\\u23f8-\\u23fa] [\\u24c2] [\\u25aa-\\u25ab] [\\u25b6] [\\u25c0] [\\u25fb-\\u25fe] [\\u2600-\\u2604] [\\u260e] [\\u2611] [\\u2614-\\u2615] [\\u2618] [\\u261d] [\\u2620] [\\u2622-\\u2623] [\\u2626] [\\u262a] [\\u262e-\\u262f] [\\u2638-\\u263a] [\\u2640] [\\u2642] [\\u2648-\\u2653] [\\u265f-\\u2660] [\\u2663] [\\u2665-\\u2666] [\\u2668] [\\u267b] [\\u267e-\\u267f] [\\u2692-\\u2697] [\\u2699] [\\u269b-\\u269c] [\\u26a0-\\u26a1] [\\u26a7] [\\u26aa-\\u26ab] [\\u26b0-\\u26b1] [\\u26bd-\\u26be] [\\u26c4-\\u26c5] [\\u26c8] [\\u26ce-\\u26cf] [\\u26d1] [\\u26d3-\\u26d4] [\\u26e9-\\u26ea] [\\u26f0-\\u26f5] [\\u26f7-\\u26fa] [\\u26fd] [\\u2702] [\\u2705] [\\u2708-\\u270d] [\\u270f] [\\u2712] [\\u2714] [\\u2716] [\\u271d] [\\u2721] [\\u2728] [\\u2733-\\u2734] [\\u2744] [\\u2747] [\\u274c] [\\u274e] [\\u2753-\\u2755] [\\u2757] [\\u2763-\\u2764] [\\u2795-\\u2797] [\\u27a1] [\\u27b0] [\\u27bf] [\\u2934-\\u2935] [\\u2b05-\\u2b07] [\\u2b1b-\\u2b1c] [\\u2b50] [\\u2b55] [\\u3030] [\\u303d] [\\u3297] [\\u3299]/' < "$system_list" > "$our_list.step"; } 2>&1 ); then
+        return 1
+    fi
+    if ! grep 'u1f680-.u1faff' "$our_list.step" > /dev/null 2>&1 < /dev/null || ! grep 'u2763-.u2764' "$our_list.step" > /dev/null 2>&1 < /dev/null; then
+        list_error="$list_name was not changed"
+        rm -f "$our_list.step" < /dev/null
+        return 1
+    fi
     return 0
 }
 
@@ -287,6 +347,82 @@ unlink_lists() {
     rm -rf "$OUR_LISTS" < /dev/null
     log "font: the character lists unlinked"
     return 0
+}
+
+# The lists as the tweaks that are on want them, made afresh from the system's: our links come off first, since the
+# system's files cannot be read through them. With neither tweak on none of ours is left. Returns 1 with list_error set.
+apply_lists() {
+    if ! unlink_lists; then
+        return 1
+    fi
+    if [ ! -e "$ON/emoji-font" ] && [ ! -e "$ON/script-fonts" ]; then
+        return 0
+    fi
+    if ! make_lists; then
+        return 1
+    fi
+    link_lists
+}
+
+# The app's fonts of rare alphabets and their components into SCRIPT_FONTS, each whole. $1 is the app's folder.
+# Returns 1 with script_error set.
+copy_script_fonts() {
+    if ! script_error=$( { mkdir -p "$SCRIPT_FONTS" && chmod 755 "$SCRIPT_FONTS"; } 2>&1 < /dev/null ); then
+        return 1
+    fi
+    for source_file in "$1"/*.ttf "$1/components.cfr-part"; do
+        if [ ! -f "$source_file" ]; then
+            script_error="no such file: $source_file"
+            return 1
+        fi
+        if ! copy_whole "$source_file" "$SCRIPT_FONTS/${source_file##*/}" 644; then
+            script_error="cannot write ${source_file##*/}: $copy_error"
+            return 1
+        fi
+    done
+    return 0
+}
+
+# Each of those fonts linked into the system's font folder, where the lists name them. Returns 1 with script_error set.
+link_script_fonts() {
+    for font_file in "$SCRIPT_FONTS"/*.ttf; do
+        if [ ! -f "$font_file" ]; then
+            script_error="no fonts in $SCRIPT_FONTS"
+            return 1
+        fi
+        system_path=$SYSTEM_LISTS/${font_file##*/}
+        case "$(ls -l "$system_path" 2>&1 < /dev/null)" in
+            *" -> $font_file"*)
+                continue
+                ;;
+        esac
+        if ! script_error=$(ln -sP "$font_file" "$system_path" 2>&1 < /dev/null); then
+            return 1
+        fi
+        case "$(ls -l "$system_path" 2>&1 < /dev/null)" in
+            *" -> $font_file"*)
+                ;;
+            *)
+                script_error="the link $system_path is not there after ln"
+                return 1
+                ;;
+        esac
+    done
+    log "scripts: the fonts linked"
+    return 0
+}
+
+# Our links of those fonts gone from the system's folder.
+unlink_script_fonts() {
+    for font_file in "$SCRIPT_FONTS"/*.ttf; do
+        system_path=$SYSTEM_LISTS/${font_file##*/}
+        case "$(ls -l "$system_path" 2>&1 < /dev/null)" in
+            *" -> $font_file"*)
+                rm -f "$system_path" < /dev/null
+                ;;
+        esac
+    done
+    log "scripts: the fonts unlinked"
 }
 
 # One run of the store tool, as the store's own user. Its last line says it finished. Returns 1 with certs_error set.
@@ -337,7 +473,7 @@ cascades_host() {
     pidin arg 2> /dev/null < /dev/null | awk '$2 == "/bin/cascades" && $3 == "/dev/cascades" {print $1; exit}'
 }
 
-# Apps that run all the time and take the system's theme.
+# Apps of the system that run all the time: they take the system's theme and draw names (the phone, the notifications).
 theme_app_pids() {
     pidin arg 2> /dev/null < /dev/null | awk '$2 ~ /^app\/native\/(libphone|libsettings|libsys\.pim\.calendar|NotificationsCard|libsys\.filepicker)/ {print $1}'
 }
@@ -516,7 +652,22 @@ unlink_hub_dark() {
     log "theme: the Hub's dark files are unlinked"
 }
 
-# The theme set and the host stopped; the system starts it again when the next app needs it, so it is not waited for.
+# Every Cascades app is forked from the host and inherits what the host read when it started: the theme and the character
+# lists. Stopped, the host is started again by the system when the next app needs it, so it is not waited for beyond 10 s.
+# host_pid says which one it was, empty when none was running.
+stop_cascades_host() {
+    host_pid=$(cascades_host)
+    if [ -n "$host_pid" ]; then
+        kill "$host_pid"
+        waited=0
+        while [ "$(cascades_host)" = "$host_pid" ] && [ "$waited" -lt 10 ]; do
+            sleep 1 < /dev/null
+            waited=$((waited + 1))
+        done
+    fi
+}
+
+# The theme set. The host reads it when it starts: the caller stops it, once, after everything else it changes.
 # theme_changed says whether anything was to do. Returns 1 with theme_error set.
 apply_theme() {
     theme_changed=
@@ -527,17 +678,8 @@ apply_theme() {
     if ! theme_error=$( { echo "defaultTheme::$1" >> "$THEME_PPS"; } 2>&1 < /dev/null ); then
         return 1
     fi
-    host_pid=$(cascades_host)
-    if [ -n "$host_pid" ]; then
-        kill "$host_pid"
-        waited=0
-        while [ "$(cascades_host)" = "$host_pid" ] && [ "$waited" -lt 10 ]; do
-            sleep 1 < /dev/null
-            waited=$((waited + 1))
-        done
-    fi
     theme_changed=1
-    log "theme: $1, the Cascades host stopped (it was $host_pid)"
+    log "theme: $1"
     return 0
 }
 
@@ -552,9 +694,20 @@ restart_pids() {
     done
 }
 
+# The system's apps that are always about were started by the old host and keep its theme and character lists until they
+# restart. $1 names the change for the log.
 restart_theme_apps() {
     restart_pids "$(theme_app_pids)"
-    log "theme: the apps restarted"
+    log "$1: the system's apps restarted"
+}
+
+# At once when there is no call, else once the screen is off. $1 names the change for the log.
+restart_theme_apps_soon() {
+    if phone_is_idle; then
+        restart_theme_apps "$1"
+    else
+        restart_theme_apps_later "$1"
+    fi
 }
 
 phone_is_idle() {
@@ -562,9 +715,11 @@ phone_is_idle() {
 }
 
 # Nothing closes in someone's hands: the apps go once the screen is off and there is no call, for up to 12 hours. In the
-# background, so that the boot start returns at once.
+# background, so that the boot start returns at once. $1 names the change for the log.
 restart_theme_apps_later() {
     (
+        # Outlives this run: the lock is not its to remove.
+        trap - 0
         exec < /dev/null > /dev/null 2>> "$LOG" 3>&- 4>&- 5>&- 6>&- 7>&- 8>&- 9>&-
         tries=0
         while [ "$tries" -lt 720 ]; do
@@ -572,7 +727,7 @@ restart_theme_apps_later() {
             case "$brightness" in
                 0 | 0.0 | 0.00 | 0.000)
                     if phone_is_idle; then
-                        restart_theme_apps
+                        restart_theme_apps "$1"
                         exit 0
                     fi
                     ;;
@@ -580,7 +735,7 @@ restart_theme_apps_later() {
             tries=$((tries + 1))
             sleep 60
         done
-        log "theme: the screen did not go off in 12 hours, the apps were not restarted"
+        log "$1: the screen did not go off in 12 hours, the system's apps were not restarted"
     ) &
 }
 
@@ -612,6 +767,8 @@ app_uninstalled() {
 # not). Lets go of everything the caller gave it, so the boot start returns at once.
 release_guard_later() {
     (
+        # Outlives this run: the lock is not its to remove.
+        trap - 0
         exec < /dev/null > /dev/null 2>> "$LOG" 3>&- 4>&- 5>&- 6>&- 7>&- 8>&- 9>&-
         trap 'rm -f "$GUARD"; log "the boot guard is off: a clean stop"; exit 0' TERM
         # wait, not a plain sleep: the shell runs the trap during wait at once.
@@ -640,23 +797,31 @@ boot_start() {
         log "exit: the last boot went down within $SETTLE s of applying, so nothing this time"
         exit 0
     fi
-    if [ ! -e "$ON/emoji-font" ] && [ ! -e "$ON/system-theme" ] && [ ! -e "$ON/hub-theme" ]; then
+    if [ ! -e "$ON/emoji-font" ] && [ ! -e "$ON/script-fonts" ] && [ ! -e "$ON/system-theme" ] && [ ! -e "$ON/hub-theme" ]; then
         log "done: nothing is on"
         exit 0
+    fi
+    # A change started from the app right after the boot finishes first; a lock left from before the reboot is taken over.
+    if ! take_lock; then
+        log "lock: another change has run for $LOCK_WAIT s, applying anyway"
     fi
     if ! { true > "$GUARD"; } 2> /dev/null; then
         log "exit: the guard cannot be created, so nothing is applied"
         exit 0
     fi
-    # The Hub restarts once, last: after the theme has stopped the Cascades host and with everything linked.
+    # Everything is set first; then, once each: the Cascades host stops (every app it starts afterwards reads the new theme
+    # and character lists), the Hub restarts, and the system's apps restart once the screen is off.
+    host_stop=
     hub_restart=
+    system_apps_restart=
     if [ -e "$ON/system-theme" ]; then
         if ! IFS= read -r wanted_theme < "$ON/system-theme"; then
             log "theme: cannot read $ON/system-theme"
         elif ! apply_theme "$wanted_theme"; then
             log "theme: cannot set it: $theme_error"
         elif [ -n "$theme_changed" ]; then
-            restart_theme_apps_later
+            host_stop=1
+            system_apps_restart=1
         fi
     fi
     if [ -e "$ON/hub-theme" ] && IFS= read -r wanted_hub < "$ON/hub-theme" && [ "$wanted_hub" = black ] && [ -e "$THEME_DARK/ready" ] && find_package sys.pim.messages; then
@@ -669,22 +834,46 @@ boot_start() {
     if [ -e "$ON/emoji-font" ]; then
         if [ ! -f "$OUR_FONT" ]; then
             log "font: on, but $OUR_FONT is not there"
-        elif link_font; then
-            if ! make_lists || ! link_lists; then
-                log "font: the character lists: $list_error"
-            fi
-            hub_restart=1
-        else
+        elif ! link_font; then
             log "font: cannot link: $link_error"
         fi
     fi
+    if [ -e "$ON/script-fonts" ]; then
+        if ! link_script_fonts; then
+            log "scripts: cannot link the fonts: $script_error"
+        fi
+    fi
+    # The host started before this hook with the system's lists, and every app it starts inherits them.
+    if [ -e "$ON/emoji-font" ] || [ -e "$ON/script-fonts" ]; then
+        if ! apply_lists; then
+            log "fonts: the character lists: $list_error"
+        fi
+        host_stop=1
+        hub_restart=1
+        system_apps_restart=1
+    fi
+    if [ -n "$host_stop" ]; then
+        stop_cascades_host
+        log "boot: the Cascades host stopped (it was $host_pid)"
+    fi
     if [ -n "$hub_restart" ]; then
         restart_hub
+    fi
+    if [ -n "$system_apps_restart" ]; then
+        restart_theme_apps_later boot
     fi
     release_guard_later
     log "done"
     exit 0
 }
+
+case "$mode" in
+    font-on | font-off | scripts-on | scripts-off | system-theme | hub-theme)
+        if ! take_lock; then
+            fail "another change is still running (process $holder), try again in a minute"
+        fi
+        ;;
+esac
 
 case "$mode" in
     install)
@@ -716,10 +905,13 @@ case "$mode" in
         if ! link_font; then
             fail "cannot link the font: $link_error"
         fi
-        if ! make_lists || ! link_lists; then
+        if ! apply_lists; then
             fail "cannot open the emoji range: $list_error"
         fi
+        stop_cascades_host
+        log "font: the Cascades host stopped (it was $host_pid)"
         restart_hub
+        restart_theme_apps_soon font
         log "done"
         echo "result=ok"
         ;;
@@ -728,12 +920,58 @@ case "$mode" in
         if ! unlink_font; then
             fail "cannot take the link off: $link_error"
         fi
-        if ! unlink_lists; then
+        if ! apply_lists; then
             fail "cannot take the character lists off: $list_error"
         fi
+        stop_cascades_host
+        log "font: the Cascades host stopped (it was $host_pid)"
         restart_hub
+        restart_theme_apps_soon font
         # After the Hub: what has the file open keeps reading it, new opens get the system's.
         rm -f "$OUR_FONT" < /dev/null
+        log "done"
+        echo "result=ok"
+        ;;
+    scripts-on)
+        install_hook "$2"
+        case "$3" in
+            /*)
+                ;;
+            *)
+                fail "not a full path: $3"
+                ;;
+        esac
+        if ! copy_script_fonts "$3"; then
+            fail "cannot copy the fonts: $script_error"
+        fi
+        if ! { true > "$ON/script-fonts"; } 2> /dev/null; then
+            fail "cannot write $ON/script-fonts"
+        fi
+        if ! link_script_fonts; then
+            fail "cannot link the fonts: $script_error"
+        fi
+        if ! apply_lists; then
+            fail "cannot put the fonts into the character lists: $list_error"
+        fi
+        stop_cascades_host
+        log "scripts: the Cascades host stopped (it was $host_pid)"
+        restart_hub
+        restart_theme_apps_soon scripts
+        log "done"
+        echo "result=ok"
+        ;;
+    scripts-off)
+        rm -f "$ON/script-fonts" < /dev/null
+        if ! apply_lists; then
+            fail "cannot take the fonts out of the character lists: $list_error"
+        fi
+        unlink_script_fonts
+        stop_cascades_host
+        log "scripts: the Cascades host stopped (it was $host_pid)"
+        restart_hub
+        restart_theme_apps_soon scripts
+        # After the Hub: what has a file open keeps reading it.
+        rm -rf "$SCRIPT_FONTS" < /dev/null
         log "done"
         echo "result=ok"
         ;;
@@ -753,11 +991,9 @@ case "$mode" in
             fail "cannot set the theme: $theme_error"
         fi
         if [ -n "$theme_changed" ]; then
-            if phone_is_idle; then
-                restart_theme_apps
-            else
-                restart_theme_apps_later
-            fi
+            stop_cascades_host
+            log "theme: the Cascades host stopped (it was $host_pid)"
+            restart_theme_apps_soon theme
         fi
         log "done"
         echo "result=ok"

@@ -1,0 +1,441 @@
+        <ComponentDef locationHint="NotoSansAdlamUnjoined-Regular.ttf" name="Noto Sans Adlam Unjoined">
+        <UnicodeCharSet uset="[ [\u2e28-\u2e29] [\u2e41] [\u1e900-\u1e94b] [\u1e950-\u1e959] [\u1e95e-\u1e95f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansAnatolianHieroglyphs-Regular.ttf" name="Noto Sans Anatolian Hieroglyphs">
+        <UnicodeCharSet uset="[ [\u14400-\u14646] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansArmenian-Regular.ttf" name="Noto Sans Armenian">
+        <UnicodeCharSet uset="[ [\u58d-\u58f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansAvestan-Regular.ttf" name="Noto Sans Avestan">
+        <UnicodeCharSet uset="[ [\u2e30-\u2e31] [\u10b00-\u10b35] [\u10b39-\u10b3f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBalinese-Regular.ttf" name="Noto Sans Balinese">
+        <UnicodeCharSet uset="[ [\u1b00-\u1b4c] [\u1b50-\u1b7e] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBamum-Regular.ttf" name="Noto Sans Bamum">
+        <UnicodeCharSet uset="[ [\ua6a0-\ua6f7] [\u16800-\u16a38] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBassaVah-Regular.ttf" name="Noto Sans Bassa Vah">
+        <UnicodeCharSet uset="[ [\u16ad0-\u16aed] [\u16af0-\u16af5] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBatak-Regular.ttf" name="Noto Sans Batak">
+        <UnicodeCharSet uset="[ [\u1bc0-\u1bf3] [\u1bfc-\u1bff] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBhaiksuki-Regular.ttf" name="Noto Sans Bhaiksuki">
+        <UnicodeCharSet uset="[ [\u11c00-\u11c08] [\u11c0a-\u11c36] [\u11c38-\u11c45] [\u11c50-\u11c6c] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBrahmi-Regular.ttf" name="Noto Sans Brahmi">
+        <UnicodeCharSet uset="[ [\u11000-\u1104d] [\u11052-\u11075] [\u1107f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBuginese-Regular.ttf" name="Noto Sans Buginese">
+        <UnicodeCharSet uset="[ [\u1a00-\u1a1b] [\u1a1e-\u1a1f] [\ua9cf] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansBuhid-Regular.ttf" name="Noto Sans Buhid">
+        <UnicodeCharSet uset="[ [\u1735-\u1736] [\u1740-\u1753] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCanadianAboriginal-Regular.ttf" name="Noto Sans Canadian Aboriginal">
+        <UnicodeCharSet uset="[ [\u1400] [\u1677-\u167f] [\u18b0-\u18f5] [\u11ab0-\u11abf] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCarian-Regular.ttf" name="Noto Sans Carian">
+        <UnicodeCharSet uset="[ [\u102a0-\u102d0] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCaucasianAlbanian-Regular.ttf" name="Noto Sans Caucasian Albanian">
+        <UnicodeCharSet uset="[ [\ufe24-\ufe26] [\ufe2b-\ufe2d] [\u10530-\u10563] [\u1056f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansChakma-Regular.ttf" name="Noto Sans Chakma">
+        <UnicodeCharSet uset="[ [\u1040-\u1049] [\u11100-\u11134] [\u11136-\u11147] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCham-Regular.ttf" name="Noto Sans Cham">
+        <UnicodeCharSet uset="[ [\uaa00-\uaa36] [\uaa40-\uaa4d] [\uaa50-\uaa59] [\uaa5c-\uaa5f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCherokee-Regular.ttf" name="Noto Sans Cherokee">
+        <UnicodeCharSet uset="[ [\u13a0-\u13f5] [\u13f8-\u13fd] [\uab70-\uabbf] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansChorasmian-Regular.ttf" name="Noto Sans Chorasmian">
+        <UnicodeCharSet uset="[ [\u10fb0-\u10fcb] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCoptic-Regular.ttf" name="Noto Sans Coptic">
+        <UnicodeCharSet uset="[ [\u1dcd] [\u2c80-\u2cf3] [\u2cf9-\u2cff] [\u2e17] [\u2e33-\u2e34] [\u102e0-\u102fb] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCuneiform-Regular.ttf" name="Noto Sans Cuneiform">
+        <UnicodeCharSet uset="[ [\u12000-\u12399] [\u12400-\u1246e] [\u12470-\u12474] [\u12480-\u12543] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCypriot-Regular.ttf" name="Noto Sans Cypriot">
+        <UnicodeCharSet uset="[ [\u10800-\u10805] [\u10808] [\u1080a-\u10835] [\u10837-\u10838] [\u1083c] [\u1083f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansCyproMinoan-Regular.ttf" name="Noto Sans Cypro Minoan">
+        <UnicodeCharSet uset="[ [\u12f90-\u12ff2] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansDeseret-Regular.ttf" name="Noto Sans Deseret">
+        <UnicodeCharSet uset="[ [\u10400-\u1044f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansEgyptianHieroglyphs-Regular.ttf" name="Noto Sans EgyptHiero">
+        <UnicodeCharSet uset="[ [\u13000-\u1342f] [\u13441-\u13446] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansElbasan-Regular.ttf" name="Noto Sans Elbasan">
+        <UnicodeCharSet uset="[ [\u10500-\u10527] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansElymaic-Regular.ttf" name="Noto Sans Elymaic">
+        <UnicodeCharSet uset="[ [\u10fe0-\u10ff6] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansEthiopic-Regular.ttf" name="Noto Sans Ethiopic">
+        <UnicodeCharSet uset="[ [\u1200-\u1248] [\u124a-\u124d] [\u1250-\u1256] [\u1258] [\u125a-\u125d] [\u1260-\u1288] [\u128a-\u128d] [\u1290-\u12b0] [\u12b2-\u12b5] [\u12b8-\u12be] [\u12c0] [\u12c2-\u12c5] [\u12c8-\u12d6] [\u12d8-\u1310] [\u1312-\u1315] [\u1318-\u135a] [\u135d-\u137c] [\u1380-\u1399] [\u2d80-\u2d96] [\u2da0-\u2da6] [\u2da8-\u2dae] [\u2db0-\u2db6] [\u2db8-\u2dbe] [\u2dc0-\u2dc6] [\u2dc8-\u2dce] [\u2dd0-\u2dd6] [\u2dd8-\u2dde] [\uab01-\uab06] [\uab09-\uab0e] [\uab11-\uab16] [\uab20-\uab26] [\uab28-\uab2e] [\u1e7e0-\u1e7e6] [\u1e7e8-\u1e7eb] [\u1e7ed-\u1e7ee] [\u1e7f0-\u1e7fe] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansGeorgian-Regular.ttf" name="Noto Sans Georgian">
+        <UnicodeCharSet uset="[ [\u10fd-\u10ff] [\u1c90-\u1cba] [\u1cbd-\u1cbf] [\u20be] [\u2d00-\u2d25] [\u2d27] [\u2d2d] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansGlagolitic-Regular.ttf" name="Noto Sans Glagolitic">
+        <UnicodeCharSet uset="[ [\u2c00-\u2c2e] [\u2c30-\u2c5e] [\ufe2e-\ufe2f] [\u1e000-\u1e006] [\u1e008-\u1e018] [\u1e01b-\u1e021] [\u1e023-\u1e024] [\u1e026-\u1e02a] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansGothic-Regular.ttf" name="Noto Sans Gothic">
+        <UnicodeCharSet uset="[ [\u10330-\u1034a] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansGrantha-Regular.ttf" name="Noto Sans Grantha">
+        <UnicodeCharSet uset="[ [\u1cd0] [\u1cd2-\u1cd3] [\u1cf2-\u1cf4] [\u1cf8-\u1cf9] [\u20f0] [\u11300-\u11303] [\u11305-\u1130c] [\u1130f-\u11310] [\u11313-\u11328] [\u1132a-\u11330] [\u11332-\u11333] [\u11335-\u11339] [\u1133b-\u11344] [\u11347-\u11348] [\u1134b-\u1134d] [\u11350] [\u11357] [\u1135d-\u11363] [\u11366-\u1136c] [\u11370-\u11374] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansGunjalaGondi-Regular.ttf" name="Noto Sans Gunjala Gondi">
+        <UnicodeCharSet uset="[ [\u11d60-\u11d65] [\u11d67-\u11d68] [\u11d6a-\u11d8e] [\u11d90-\u11d91] [\u11d93-\u11d98] [\u11da0-\u11da9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansHanifiRohingya-Regular.ttf" name="Noto Sans Hanifi Rohingya">
+        <UnicodeCharSet uset="[ [\u10d00-\u10d27] [\u10d30-\u10d39] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansHanunoo-Regular.ttf" name="Noto Sans Hanunoo">
+        <UnicodeCharSet uset="[ [\u1720-\u1734] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansHatran-Regular.ttf" name="Noto Sans Hatran">
+        <UnicodeCharSet uset="[ [\u108e0-\u108f2] [\u108f4-\u108f5] [\u108fb-\u108ff] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansImperialAramaic-Regular.ttf" name="Noto Sans ImpAramaic">
+        <UnicodeCharSet uset="[ [\u10840-\u10855] [\u10857-\u1085f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansIndicSiyaqNumbers-Regular.ttf" name="Noto Sans Indic Siyaq Numbers">
+        <UnicodeCharSet uset="[ [\u1ec71-\u1ecb4] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansInscriptionalPahlavi-Regular.ttf" name="Noto Sans InsPahlavi">
+        <UnicodeCharSet uset="[ [\u10b60-\u10b72] [\u10b78-\u10b7f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansInscriptionalParthian-Regular.ttf" name="Noto Sans Inscriptional Parthian">
+        <UnicodeCharSet uset="[ [\u10b40-\u10b55] [\u10b58-\u10b5f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansJavanese-Regular.ttf" name="Noto Sans Javanese">
+        <UnicodeCharSet uset="[ [\ua980-\ua9cd] [\ua9d0-\ua9d9] [\ua9de-\ua9df] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansKaithi-Regular.ttf" name="Noto Sans Kaithi">
+        <UnicodeCharSet uset="[ [\ua830-\ua839] [\u11080-\u110c2] [\u110cd] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansKawi-Regular.ttf" name="Noto Sans Kawi">
+        <UnicodeCharSet uset="[ [\u11f00-\u11f10] [\u11f12-\u11f3a] [\u11f3c] [\u11f3e-\u11f59] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansKayahLi-Regular.ttf" name="Noto Sans Kayah Li">
+        <UnicodeCharSet uset="[ [\ua900-\ua92f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansKharoshthi-Regular.ttf" name="Noto Sans Kharoshthi">
+        <UnicodeCharSet uset="[ [\u10a00-\u10a03] [\u10a05-\u10a06] [\u10a0c-\u10a13] [\u10a15-\u10a17] [\u10a19-\u10a35] [\u10a38-\u10a3a] [\u10a3f-\u10a48] [\u10a50-\u10a58] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansKhmer-Regular.ttf" name="Noto Sans Khmer">
+        <UnicodeCharSet uset="[ [\u1780-\u17dd] [\u17e0-\u17e9] [\u17f0-\u17f9] [\u19e0-\u19ff] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansKhojki-Regular.ttf" name="Noto Sans Khojki">
+        <UnicodeCharSet uset="[ [\u11200-\u11211] [\u11213-\u11240] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansKhudawadi-Regular.ttf" name="Noto Sans Khudawadi">
+        <UnicodeCharSet uset="[ [\u112b0-\u112ea] [\u112f0-\u112f9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLao-Regular.ttf" name="Noto Sans Lao">
+        <UnicodeCharSet uset="[ [\uede-\uedf] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLepcha-Regular.ttf" name="Noto Sans Lepcha">
+        <UnicodeCharSet uset="[ [\u1c00-\u1c37] [\u1c3b-\u1c49] [\u1c4d-\u1c4f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLimbu-Regular.ttf" name="Noto Sans Limbu">
+        <UnicodeCharSet uset="[ [\u1900-\u191e] [\u1920-\u192b] [\u1930-\u193b] [\u1940] [\u1944-\u194f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLinearA-Regular.ttf" name="Noto Sans Linear A">
+        <UnicodeCharSet uset="[ [\u10600-\u10736] [\u10740-\u10755] [\u10760-\u10767] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLinearB-Regular.ttf" name="Noto Sans Linear B">
+        <UnicodeCharSet uset="[ [\u10000-\u1000b] [\u1000d-\u10026] [\u10028-\u1003a] [\u1003c-\u1003d] [\u1003f-\u1004d] [\u10050-\u1005d] [\u10080-\u100fa] [\u10100-\u10102] [\u10107-\u10133] [\u10137-\u1013f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLisu-Regular.ttf" name="Noto Sans Lisu">
+        <UnicodeCharSet uset="[ [\ua4d0-\ua4ff] [\u11fb0] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLycian-Regular.ttf" name="Noto Sans Lycian">
+        <UnicodeCharSet uset="[ [\u10280-\u1029c] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansLydian-Regular.ttf" name="Noto Sans Lydian">
+        <UnicodeCharSet uset="[ [\u10920-\u10939] [\u1093f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMahajani-Regular.ttf" name="Noto Sans Mahajani">
+        <UnicodeCharSet uset="[ [\u11150-\u11176] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMandaic-Regular.ttf" name="Noto Sans Mandaic">
+        <UnicodeCharSet uset="[ [\u840-\u85b] [\u85e] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansManichaean-Regular.ttf" name="Noto Sans Manichaean">
+        <UnicodeCharSet uset="[ [\u10ac0-\u10ae6] [\u10aeb-\u10af6] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMarchen-Regular.ttf" name="Noto Sans Marchen">
+        <UnicodeCharSet uset="[ [\u11c70-\u11c8f] [\u11c92-\u11ca7] [\u11ca9-\u11cb6] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMasaramGondi-Regular.ttf" name="Noto Sans Masaram Gondi">
+        <UnicodeCharSet uset="[ [\u11d00-\u11d06] [\u11d08-\u11d09] [\u11d0b-\u11d36] [\u11d3a] [\u11d3c-\u11d3d] [\u11d3f-\u11d47] [\u11d50-\u11d59] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMayanNumerals-Regular.ttf" name="Noto Sans Mayan Numerals">
+        <UnicodeCharSet uset="[ [\u1d2e0-\u1d2f3] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMedefaidrin-Regular.ttf" name="Noto Sans Medefaidrin">
+        <UnicodeCharSet uset="[ [\u16e40-\u16e9a] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMeeteiMayek-Regular.ttf" name="Noto Sans Meetei Mayek">
+        <UnicodeCharSet uset="[ [\uaae0-\uaaf6] [\uabc0-\uabed] [\uabf0-\uabf9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMendeKikakui-Regular.ttf" name="Noto Sans Mende Kikakui">
+        <UnicodeCharSet uset="[ [\u1e800-\u1e8c4] [\u1e8c7-\u1e8d6] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMeroitic-Regular.ttf" name="Noto Sans Meroitic">
+        <UnicodeCharSet uset="[ [\u10980-\u109b7] [\u109bc-\u109cf] [\u109d2-\u109ff] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMiao-Regular.ttf" name="Noto Sans Miao">
+        <UnicodeCharSet uset="[ [\u16f00-\u16f4a] [\u16f4f-\u16f87] [\u16f8f-\u16f9f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansModi-Regular.ttf" name="Noto Sans Modi">
+        <UnicodeCharSet uset="[ [\u11600-\u11644] [\u11650-\u11659] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMongolian-Regular.ttf" name="Noto Sans Mongolian">
+        <UnicodeCharSet uset="[ [\u1800-\u1819] [\u1820-\u1878] [\u1880-\u18aa] [\u11660-\u1166c] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMro-Regular.ttf" name="Noto Sans Mro">
+        <UnicodeCharSet uset="[ [\u16a40-\u16a5e] [\u16a60-\u16a69] [\u16a6e-\u16a6f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMultani-Regular.ttf" name="Noto Sans Multani">
+        <UnicodeCharSet uset="[ [\u11280-\u11286] [\u11288] [\u1128a-\u1128d] [\u1128f-\u1129d] [\u1129f-\u112a9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMyanmar-Regular.ttf" name="Noto Sans Myanmar">
+        <UnicodeCharSet uset="[ [\u1000-\u103f] [\u104a-\u109f] [\ua9e0-\ua9fe] [\uaa60-\uaa7f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansNKoUnjoined-Regular.ttf" name="Noto Sans NKo Unjoined">
+        <UnicodeCharSet uset="[ [\u7fd-\u7ff] [\u2e1c-\u2e1d] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansNabataean-Regular.ttf" name="Noto Sans Nabataean">
+        <UnicodeCharSet uset="[ [\u10880-\u1089e] [\u108a7-\u108af] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansNagMundari-Regular.ttf" name="Noto Sans Nag Mundari">
+        <UnicodeCharSet uset="[ [\u1e4d0-\u1e4f9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansNandinagari-Regular.ttf" name="Noto Sans Nandinagari">
+        <UnicodeCharSet uset="[ [\u1ce9] [\u1cfa] [\u119a0-\u119a7] [\u119aa-\u119d7] [\u119da-\u119e4] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansNewTaiLue-Regular.ttf" name="Noto Sans New Tai Lue">
+        <UnicodeCharSet uset="[ [\u1980-\u19ab] [\u19b0-\u19c9] [\u19d0-\u19da] [\u19de-\u19df] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansNewa-Regular.ttf" name="Noto Sans Newa">
+        <UnicodeCharSet uset="[ [\u1dfb] [\u11400-\u1145b] [\u1145d-\u11461] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansNushu-Regular.ttf" name="Noto Sans Nushu">
+        <UnicodeCharSet uset="[ [\u16fe1] [\u1b170-\u1b2fb] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOlChiki-Regular.ttf" name="Noto Sans Ol Chiki">
+        <UnicodeCharSet uset="[ [\u1c50-\u1c7f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldHungarian-Regular.ttf" name="Noto Sans Old Hungarian">
+        <UnicodeCharSet uset="[ [\u10c80-\u10cb2] [\u10cc0-\u10cf2] [\u10cfa-\u10cff] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldItalic-Regular.ttf" name="Noto Sans Old Italic">
+        <UnicodeCharSet uset="[ [\u1032d-\u1032f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldNorthArabian-Regular.ttf" name="Noto Sans Old North Arabian">
+        <UnicodeCharSet uset="[ [\u10a80-\u10a9f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldPermic-Regular.ttf" name="Noto Sans Old Permic">
+        <UnicodeCharSet uset="[ [\u10350-\u1037a] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldPersian-Regular.ttf" name="Noto Sans Old Persian">
+        <UnicodeCharSet uset="[ [\u103a0-\u103c3] [\u103c8-\u103d5] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldSogdian-Regular.ttf" name="Noto Sans OldSogdian">
+        <UnicodeCharSet uset="[ [\u10f00-\u10f27] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldSouthArabian-Regular.ttf" name="Noto Sans Old South Arabian">
+        <UnicodeCharSet uset="[ [\u10a60-\u10a7f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOldTurkic-Regular.ttf" name="Noto Sans Old Turkic">
+        <UnicodeCharSet uset="[ [\u10c00-\u10c48] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOriya-Regular.ttf" name="Noto Sans Oriya">
+        <UnicodeCharSet uset="[ [\ub01-\ub03] [\ub05-\ub0c] [\ub0f-\ub10] [\ub13-\ub28] [\ub2a-\ub30] [\ub32-\ub33] [\ub35-\ub39] [\ub3c-\ub44] [\ub47-\ub48] [\ub4b-\ub4d] [\ub55-\ub57] [\ub5c-\ub5d] [\ub5f-\ub63] [\ub66-\ub77] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOsage-Regular.ttf" name="Noto Sans Osage">
+        <UnicodeCharSet uset="[ [\u104b0-\u104d3] [\u104d8-\u104fb] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansOsmanya-Regular.ttf" name="Noto Sans Osmanya">
+        <UnicodeCharSet uset="[ [\u10480-\u1049d] [\u104a0-\u104a9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansPahawhHmong-Regular.ttf" name="Noto Sans Pahawh Hmong">
+        <UnicodeCharSet uset="[ [\u16b00-\u16b45] [\u16b50-\u16b59] [\u16b5b-\u16b61] [\u16b63-\u16b77] [\u16b7d-\u16b8f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansPalmyrene-Regular.ttf" name="Noto Sans Palmyrene">
+        <UnicodeCharSet uset="[ [\u10860-\u1087f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansPauCinHau-Regular.ttf" name="Noto Sans Pau Cin Hau">
+        <UnicodeCharSet uset="[ [\u11ac0-\u11af8] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansPhagsPa-Regular.ttf" name="Noto Sans PhagsPa">
+        <UnicodeCharSet uset="[ [\ua840-\ua877] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansPhoenician-Regular.ttf" name="Noto Sans Phoenician">
+        <UnicodeCharSet uset="[ [\u10900-\u1091b] [\u1091f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansPsalterPahlavi-Regular.ttf" name="Noto Sans PsaPahlavi">
+        <UnicodeCharSet uset="[ [\u10b80-\u10b91] [\u10b99-\u10b9c] [\u10ba9-\u10baf] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansRejang-Regular.ttf" name="Noto Sans Rejang">
+        <UnicodeCharSet uset="[ [\ua930-\ua953] [\ua95f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansRunic-Regular.ttf" name="Noto Sans Runic">
+        <UnicodeCharSet uset="[ [\u16a0-\u16f8] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSamaritan-Regular.ttf" name="Noto Sans Samaritan">
+        <UnicodeCharSet uset="[ [\u800-\u82d] [\u830-\u83e] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSaurashtra-Regular.ttf" name="Noto Sans Saurashtra">
+        <UnicodeCharSet uset="[ [\ua880-\ua8c5] [\ua8ce-\ua8d9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSharada-Regular.ttf" name="Noto Sans Sharada">
+        <UnicodeCharSet uset="[ [\u1cd7] [\u1cd9] [\u1cdc-\u1cdd] [\u1ce0] [\u11180-\u111df] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansShavian-Regular.ttf" name="Noto Sans Shavian">
+        <UnicodeCharSet uset="[ [\u10450-\u1047f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSiddham-Regular.ttf" name="Noto Sans Siddham">
+        <UnicodeCharSet uset="[ [\u11580-\u115b5] [\u115b8-\u115dd] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSogdian-Regular.ttf" name="Noto Sans Sogdian">
+        <UnicodeCharSet uset="[ [\u10f30-\u10f59] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSoraSompeng-Regular.ttf" name="Noto Sans Sora Sompeng">
+        <UnicodeCharSet uset="[ [\u110d0-\u110e8] [\u110f0-\u110f9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSoyombo-Regular.ttf" name="Noto Sans Soyombo">
+        <UnicodeCharSet uset="[ [\u11a50-\u11aa2] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSundanese-Regular.ttf" name="Noto Sans Sundanese">
+        <UnicodeCharSet uset="[ [\u1b80-\u1bbf] [\u1cc0-\u1cc7] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSunuwar-Regular.ttf" name="Noto Sans Sunuwar">
+        <UnicodeCharSet uset="[ [\u1df5] [\u11bc0-\u11be1] [\u11bf0-\u11bf9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSylotiNagri-Regular.ttf" name="Noto Sans Syloti Nagri">
+        <UnicodeCharSet uset="[ [\ua800-\ua82c] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSyriac-Regular.ttf" name="Noto Sans Syriac">
+        <UnicodeCharSet uset="[ [\u700-\u70d] [\u70f-\u74a] [\u74d-\u74f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTagalog-Regular.ttf" name="Noto Sans Tagalog">
+        <UnicodeCharSet uset="[ [\u1700-\u1715] [\u171f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTagbanwa-Regular.ttf" name="Noto Sans Tagbanwa">
+        <UnicodeCharSet uset="[ [\u1760-\u176c] [\u176e-\u1770] [\u1772-\u1773] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTaiLe-Regular.ttf" name="Noto Sans Tai Le">
+        <UnicodeCharSet uset="[ [\u1950-\u196d] [\u1970-\u1974] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTaiTham-Regular.ttf" name="Noto Sans Tai Tham">
+        <UnicodeCharSet uset="[ [\u1a20-\u1a5e] [\u1a60-\u1a7c] [\u1a7f-\u1a89] [\u1a90-\u1a99] [\u1aa0-\u1aad] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTaiViet-Regular.ttf" name="Noto Sans Tai Viet">
+        <UnicodeCharSet uset="[ [\uaa80-\uaac2] [\uaadb-\uaadf] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTakri-Regular.ttf" name="Noto Sans Takri">
+        <UnicodeCharSet uset="[ [\u11680-\u116b9] [\u116c0-\u116c9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTangsa-Regular.ttf" name="Noto Sans Tangsa">
+        <UnicodeCharSet uset="[ [\u16a70-\u16abe] [\u16ac0-\u16ac9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansThaana-Regular.ttf" name="Noto Sans Thaana">
+        <UnicodeCharSet uset="[ [\u780-\u7b1] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTifinagh-Regular.ttf" name="Noto Sans Tifinagh">
+        <UnicodeCharSet uset="[ [\u2d70] [\u2d7f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansTirhuta-Regular.ttf" name="Noto Sans Tirhuta">
+        <UnicodeCharSet uset="[ [\u11480-\u114c7] [\u114d0-\u114d9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansUgaritic-Regular.ttf" name="Noto Sans Ugaritic">
+        <UnicodeCharSet uset="[ [\u10380-\u1039d] [\u1039f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansVai-Regular.ttf" name="Noto Sans Vai">
+        <UnicodeCharSet uset="[ [\ua500-\ua62b] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansVithkuqi-Regular.ttf" name="Noto Sans Vithkuqi">
+        <UnicodeCharSet uset="[ [\u10570-\u1057a] [\u1057c-\u1058a] [\u1058c-\u10592] [\u10594-\u10595] [\u10597-\u105a1] [\u105a3-\u105b1] [\u105b3-\u105b9] [\u105bb-\u105bc] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansWancho-Regular.ttf" name="Noto Sans Wancho">
+        <UnicodeCharSet uset="[ [\u1e2c0-\u1e2f9] [\u1e2ff] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansWarangCiti-Regular.ttf" name="Noto Sans Warang Citi">
+        <UnicodeCharSet uset="[ [\u118a0-\u118f2] [\u118ff] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansYi-Regular.ttf" name="Noto Sans Yi">
+        <UnicodeCharSet uset="[ [\ua000-\ua48c] [\ua490-\ua4c6] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansZanabazarSquare-Regular.ttf" name="Noto Sans Zanabazar Square">
+        <UnicodeCharSet uset="[ [\u11a00-\u11a47] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifAhom-Regular.ttf" name="Noto Serif Ahom">
+        <UnicodeCharSet uset="[ [\u11700-\u1171a] [\u1171d-\u1172b] [\u11730-\u11746] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifDivesAkuru-Regular.ttf" name="Noto Serif Dives Akuru">
+        <UnicodeCharSet uset="[ [\u11900] [\u11902] [\u11904] [\u11906] [\u11909] [\u1190c] [\u1190e] [\u11910] [\u11916] [\u11918-\u11929] [\u1192b-\u11935] [\u11937-\u11939] [\u1193d-\u11940] [\u11942-\u11946] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifDogra-Regular.ttf" name="Noto Serif Dogra">
+        <UnicodeCharSet uset="[ [\u11800-\u1183b] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifHentaigana-Regular.ttf" name="Noto Serif Hentaigana">
+        <UnicodeCharSet uset="[ [\u1b000-\u1b11e] [\u1b120-\u1b122] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifKhitanSmallScript-Regular.ttf" name="Noto Serif Khitan Small Script">
+        <UnicodeCharSet uset="[ [\u16fe4] [\u18b00-\u18cd5] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifMakasar-Regular.ttf" name="Noto Serif Makasar">
+        <UnicodeCharSet uset="[ [\u11ee0-\u11ef8] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifNPHmong-Regular.ttf" name="Noto Serif NP Hmong">
+        <UnicodeCharSet uset="[ [\u1e100-\u1e12c] [\u1e130-\u1e13d] [\u1e140-\u1e149] [\u1e14e-\u1e14f] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifOldUyghur-Regular.ttf" name="Noto Serif Old Uyghur">
+        <UnicodeCharSet uset="[ [\u10f70-\u10f89] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifOttomanSiyaq-Regular.ttf" name="Noto Serif Ottoman Siyaq">
+        <UnicodeCharSet uset="[ [\u1ed01-\u1ed3d] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifTibetan-Regular.ttf" name="Noto Serif Tibetan">
+        <UnicodeCharSet uset="[ [\uf00-\uf47] [\uf49-\uf6c] [\uf71-\uf97] [\uf99-\ufbc] [\ufbe-\ufcc] [\ufce-\ufda] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifTodhri-Regular.ttf" name="Noto Serif Todhri">
+        <UnicodeCharSet uset="[ [\u105c0-\u105f3] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifToto-Regular.ttf" name="Noto Serif Toto">
+        <UnicodeCharSet uset="[ [\u1e290-\u1e2ae] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSerifYezidi-Regular.ttf" name="Noto Serif Yezidi">
+        <UnicodeCharSet uset="[ [\u10e80-\u10ea9] [\u10eab-\u10ead] [\u10eb0-\u10eb1] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoZnamennyMusicalNotation-Regular.ttf" name="Noto Znamenny Musical Notation">
+        <UnicodeCharSet uset="[ [\u1cf00-\u1cf2d] [\u1cf30-\u1cf46] [\u1cf50-\u1cfc3] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSymbols-Regular.ttf" name="Noto Sans Symbols">
+        <UnicodeCharSet uset="[ [\u20dd-\u20e0] [\u20e2] [\u20e4] [\u218a-\u218b] [\u24ff] [\u26e3-\u26e8] [\u26eb-\u26ef] [\u26f6] [\u26fb-\u26fc] [\u26fe-\u26ff] [\u2921-\u2922] [\u1f100-\u1f10c] [\u1f110-\u1f16c] [\u1f172-\u1f17d] [\u1f180-\u1f18d] [\u1f18f-\u1f190] [\u1f19b-\u1f1ac] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansSymbols2-Regular.ttf" name="Noto Sans Symbols 2">
+        <UnicodeCharSet uset="[ [\u23f4-\u23f7] [\u23fb-\u23ff] [\u2424-\u2426] [\u2440-\u244a] [\u2700] [\u2981] [\u2b1d-\u2b1e] [\u2b25-\u2b2f] [\u2b4d-\u2b4f] [\u2b51-\u2b52] [\u2b56-\u2b73] [\u2b76-\u2b95] [\u2b97-\u2bfd] [\u2bff] [\u10140-\u1018e] [\u10190-\u1019c] [\u101a0] [\u101d0-\u101fd] [\u10e60-\u10e7e] [\u1d2c0-\u1d2d3] [\u1d360-\u1d378] [\u1f000-\u1f003] [\u1f005-\u1f02b] [\u1f0e0-\u1f0f5] [\u1f10d-\u1f10f] [\u1f16d-\u1f16f] [\u1f1ad] [\u1f650-\u1f67f] [\u1fb00-\u1fb92] [\u1fb94-\u1fbca] [\u1fbf0-\u1fbf9] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSansMath-Regular.ttf" name="Noto Sans Math">
+        <UnicodeCharSet uset="[ [\u20d2-\u20d5] [\u20d8-\u20da] [\u20e5-\u20ef] [\u27c0-\u27c4] [\u27c7-\u27df] [\u27e1-\u27e5] [\u27ec-\u27ef] [\u2900-\u2905] [\u2908-\u2909] [\u290c-\u2920] [\u2923-\u2933] [\u2936-\u293f] [\u2942-\u2980] [\u2982] [\u2985-\u29be] [\u29c0-\u29cd] [\u29d6-\u29ea] [\u29ec-\u29f9] [\u29fc-\u29ff] [\u2afb-\u2aff] [\u2b30-\u2b4c] [\u2bfe] [\u1d400-\u1d454] [\u1d456-\u1d49c] [\u1d49e-\u1d49f] [\u1d4a2] [\u1d4a5-\u1d4a6] [\u1d4a9-\u1d4ac] [\u1d4ae-\u1d4b9] [\u1d4bb] [\u1d4bd-\u1d4c3] [\u1d4c5-\u1d505] [\u1d507-\u1d50a] [\u1d50d-\u1d514] [\u1d516-\u1d51c] [\u1d51e-\u1d537] [\u1d7ec-\u1d7ff] [\u1ee00-\u1ee03] [\u1ee05-\u1ee1f] [\u1ee21-\u1ee22] [\u1ee24] [\u1ee27] [\u1ee29-\u1ee32] [\u1ee34-\u1ee37] [\u1ee39] [\u1ee3b] [\u1ee42] [\u1ee47] [\u1ee49] [\u1ee4b] [\u1ee4d-\u1ee4f] [\u1ee51-\u1ee52] [\u1ee54] [\u1ee57] [\u1ee59] [\u1ee5b] [\u1ee5d] [\u1ee5f] [\u1ee61-\u1ee62] [\u1ee64] [\u1ee67-\u1ee6a] [\u1ee6c-\u1ee72] [\u1ee74-\u1ee77] [\u1ee79-\u1ee7c] [\u1ee7e] [\u1ee80-\u1ee89] [\u1ee8b-\u1ee9b] [\u1eea1-\u1eea3] [\u1eea5-\u1eea9] [\u1eeab-\u1eebb] [\u1eef0-\u1eef1] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoMusic-Regular.ttf" name="Noto Music">
+        <UnicodeCharSet uset="[ [\u1d000-\u1d0f5] [\u1d100-\u1d126] [\u1d129-\u1d1ea] [\u1d200-\u1d245] ]" />
+        </ComponentDef>
+        <ComponentDef locationHint="NotoSans-Regular.ttf" name="Noto Sans">
+        <UnicodeCharSet uset="[ [\u363-\u36f] [\u526-\u52f] [\u1ab0-\u1ac0] [\u1ac5] [\u1ac7-\u1ace] [\u1c80-\u1c88] [\u1d7e-\u1d84] [\u1dc0-\u1dc3] [\u1dca-\u1dcc] [\u1dce-\u1df4] [\u1df6-\u1df9] [\u1dfc-\u1dff] [\u1efc-\u1eff] [\u20bb-\u20bc] [\u20bf-\u20c0] [\u214f] [\u2de0-\u2e16] [\u2e19-\u2e1b] [\u2e1e-\u2e21] [\u2e26-\u2e27] [\u2e2a-\u2e2d] [\u2e2f] [\u2e32] [\u2e35-\u2e40] [\u2e42-\u2e5d] [\ua640-\ua643] [\ua696-\ua69f] [\ua700-\ua707] [\ua720-\ua721] [\uab30-\uab6b] [\ufe27-\ufe2a] [\u10780-\u10785] [\u10787-\u107b0] [\u107b2-\u107ba] [\u1df00-\u1df1e] ]" />
+        </ComponentDef>

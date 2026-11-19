@@ -1,6 +1,6 @@
 /*
  * EmojiFont - the first tweak: a modern emoji font over the system's 2012 one, in every app (the context property
- * "emojiFont"; bb-shared/BB10-SYSTEM-EMOJI.md). The app only asks: the work is boot/tweaker-boot.sh's, as root.
+ * "emojiFont"; bb-shared/BB10-SYSTEM-EMOJI.md). The app only asks: the work is boot/tweaker-boot.sh's, as the system user.
  *
  * The state on screen comes from what is really there - the system font's path being a link, and to where. `enabled`
  * is what the user asked for, kept in QSettings: the link can be missing for a while after a boot.
@@ -22,7 +22,7 @@ namespace tweaker {
 class EmojiFont: public QObject
 {
     Q_OBJECT
-    // The phone has the root wrapper. Without it nothing can be changed, and `error` says so.
+    // The phone has the kit's wrapper. Without it nothing can be changed, and `error` says so.
     Q_PROPERTY(bool rootAvailable READ rootAvailable CONSTANT)
     Q_PROPERTY(bool enabled READ enabled NOTIFY stateChanged)
     Q_PROPERTY(bool busy READ busy NOTIFY stateChanged)

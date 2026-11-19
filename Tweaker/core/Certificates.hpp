@@ -1,6 +1,6 @@
 /*
  * Certificates - brings the phone's root certificates up to date (the context property "certificates"). Mozilla's list goes into
- * the certificate manager's own store and the expired roots come out of the system's; the work is boot/tweaker-boot.sh's, as root.
+ * the certificate manager's own store and the expired roots come out of the system's; the work is boot/tweaker-boot.sh's, as the system user.
  * What is written stays: after a reboot and without Tweaker.
  *
  * `upToDate` is what is really there: every root of the package being in a store the certificate manager serves.

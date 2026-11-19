@@ -20,7 +20,7 @@ const char* const kEmojiFontEnabledKey = "emojiFont/enabled";
 
 const int kScriptTimeoutMs = 300 * 1000;        // the Hub's files, some 300 of them, are copied one by one
 
-// The real path of a file of the package: the root shell runs outside our sandbox.
+// The real path of a file of the package: the system user's shell runs outside our sandbox.
 QString packagePath(const char* name)
 {
     return QFileInfo(QDir::currentPath() + QString::fromLatin1("/app/native/") + QString::fromLatin1(name)).canonicalFilePath();
@@ -132,7 +132,7 @@ void SystemTheme::onScriptFinished(const QString& verdict, const QString& output
     const bool succeeded = verdict == QLatin1String("ok") || verdict == QLatin1String("same");
 
     if (action == UpdatingHook) {
-        // Not the user's doing, and early after a boot root is not up yet: the next start of the app tries again.
+        // Not the user's doing, and early after a boot the system user is not up yet: the next start of the app tries again.
         if (!succeeded) {
             qWarning() << "[theme] the boot start was not updated:" << output.simplified();
         }

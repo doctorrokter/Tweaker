@@ -24,7 +24,7 @@ const char* const kServedSystemStore = "/var/certs/rim_trusted@global@nto";
 
 const int kScriptTimeoutMs = 120 * 1000;
 
-// The real path of a file of the package: the root shell runs outside our sandbox.
+// The real path of a file of the package: the system user's shell runs outside our sandbox.
 QString packagePath(const char* name)
 {
     return QFileInfo(QDir::currentPath() + QString::fromLatin1("/app/native/") + QString::fromLatin1(name)).canonicalFilePath();
